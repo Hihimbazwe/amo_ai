@@ -1,0 +1,192 @@
+{
+  "faqs": [
+    
+    {
+      "category": "Sending Money",
+      "question": "How do I send money?",
+      "answer": "Go to Home → Send Money. Enter the amount, view the real-time exchange rate, lock the rate, fill in recipient details (name, phone in +250 format), choose delivery method (Mobile Money or Bank Transfer), then complete payment."
+    },
+    {
+      "category": "Sending Money",
+      "question": "What is the maximum I can send?",
+      "answer": "The maximum per transaction is 5,000,000 RWF."
+    },
+    {
+      "category": "Sending Money",
+      "question": "What are the transfer fees?",
+      "answer": "Flat fees apply depending on your currency: 5 PLN, 2 USD, 2 EUR, or 2 GBP per transaction."
+    },
+    {
+      "category": "Sending Money",
+      "question": "What payment methods can I use to send money?",
+      "answer": "You can pay using Card, BLIK (Poland), Apple Pay, or Google Pay."
+    },
+    {
+      "category": "Sending Money",
+      "question": "What delivery methods are available for recipients?",
+      "answer": "Recipients can receive money via Mobile Money or Bank Transfer."
+    },
+    {
+      "category": "Sending Money",
+      "question": "How long does a transfer take?",
+      "answer": "Mobile Money transfers are usually instant. Bank transfers may take 1-2 business days."
+    },
+    {
+      "category": "Sending Money",
+      "question": "What phone number format does the recipient need?",
+      "answer": "Rwanda phone numbers must be in +250 format, e.g. +250 78 000 0000."
+    },
+    {
+      "category": "Sending Money",
+      "question": "What is a rate lock?",
+      "answer": "When you send money, Amo Pay locks the exchange rate for 5 minutes (300 seconds) so it doesn't change while you complete the transaction. If it expires, simply refresh to get a new rate."
+    },
+    {
+      "category": "Sending Money",
+      "question": "Can I get a receipt after sending money?",
+      "answer": "Yes. After every successful transaction you can generate and share a receipt directly from the app."
+    },
+
+    {
+      "category": "Currency Exchange",
+      "question": "What currencies does Amo Pay support?",
+      "answer": "Amo Pay supports RWF, USD, EUR, GBP, and PLN."
+    },
+    {
+      "category": "Currency Exchange",
+      "question": "How do I exchange currencies?",
+      "answer": "Go to Home → Exchange. Select the currencies you want to swap, enter the amount, review the rate and confirm."
+    },
+    {
+      "category": "Currency Exchange",
+      "question": "Are exchange rates real-time?",
+      "answer": "Yes. Amo Pay provides daily rate updates and real-time rates when initiating a transfer or exchange."
+    },
+    {
+      "category": "Currency Exchange",
+      "question": "What happens if my rate expires?",
+      "answer": "Rate locks last 5 minutes. If it expires before you complete the transaction, simply refresh to get the latest rate."
+    },
+
+    {
+      "category": "Merchant Services",
+      "question": "How do I become a merchant?",
+      "answer": "Go to Profile → Become a Merchant. Fill in your Business Name, Business Phone, and optional physical address. You can also add your MoMo or Airtel codes."
+    },
+    {
+      "category": "Merchant Services",
+      "question": "What tools do merchants get?",
+      "answer": "Merchants get access to: a personalized QR code for receiving payments, a Merchant Scanner to process payments quickly, and detailed analytics for their business."
+    },
+    {
+      "category": "Merchant Services",
+      "question": "How do customers pay me as a merchant?",
+      "answer": "Share your Merchant QR code. Customers scan it to pay you instantly through Amo Pay."
+    },
+    {
+      "category": "Merchant Services",
+      "question": "Can I track my merchant sales?",
+      "answer": "Yes. The Analytics section gives you detailed merchant-specific reports and transaction history."
+    },
+
+    {
+      "category": "KYC & Verification",
+      "question": "What is KYC?",
+      "answer": "KYC stands for Know Your Customer. It is an identity verification process required for higher transaction limits and enhanced account security."
+    },
+    {
+      "category": "KYC & Verification",
+      "question": "What documents do I need for KYC?",
+      "answer": "You need: a National ID or Passport (front and back photos), a clear selfie in a well-lit environment, and a Proof of Address document."
+    },
+    {
+      "category": "KYC & Verification",
+      "question": "How long does KYC verification take?",
+      "answer": "KYC review usually takes 24-48 hours after submission."
+    },
+    {
+      "category": "KYC & Verification",
+      "question": "My KYC was rejected, what do I do?",
+      "answer": "Make sure your photos are clear, well-lit, and all edges of your ID are fully visible. Retake photos if needed and resubmit. If it keeps failing, contact support."
+    },
+    {
+      "category": "KYC & Verification",
+      "question": "Can I use the app without completing KYC?",
+      "answer": "You can browse the app but you will not be able to send money or access full features until KYC is completed and verified."
+    },
+
+    {
+      "category": "Account & Security",
+      "question": "How do I log in securely?",
+      "answer": "Amo Pay supports Face ID and Biometric Authentication for fast and secure login."
+    },
+    {
+      "category": "Account & Security",
+      "question": "What are the password requirements?",
+      "answer": "Your password must be 8-128 characters and include at least one uppercase letter, one lowercase letter, one number, and one special character."
+    },
+    {
+      "category": "Account & Security",
+      "question": "Is my data safe?",
+      "answer": "Yes. Amo Pay uses SecureStore to protect your tokens and sensitive data. Never share your OTP or password with anyone."
+    },
+    {
+      "category": "Account & Security",
+      "question": "What should I do if I see suspicious activity?",
+      "answer": "Contact support immediately at support@amopay.com. Do not share any personal details with unknown contacts."
+    },
+    {
+      "category": "Account & Security",
+      "question": "My account is suspended, what do I do?",
+      "answer": "Contact support at support@amopay.com for assistance. Do not attempt to create a new account."
+    },
+
+    {
+      "category": "Payments & Errors",
+      "question": "My payment was declined, what should I do?",
+      "answer": "Check with your bank for any limits. You can also try an alternative payment method like BLIK, Apple Pay, or Google Pay."
+    },
+    {
+      "category": "Payments & Errors",
+      "question": "I have insufficient balance, what do I do?",
+      "answer": "Top up your wallet balance first before attempting the transaction again."
+    },
+    {
+      "category": "Payments & Errors",
+      "question": "My session expired, what should I do?",
+      "answer": "Simply log in again. Amo Pay will automatically refresh your session securely."
+    },
+    {
+      "category": "Payments & Errors",
+      "question": "Can I cancel or reverse a transaction?",
+      "answer": "Transactions cannot be reversed directly in the app. Please contact support at support@amopay.com as soon as possible if you need help with a transaction."
+    },
+
+    {
+      "category": "General",
+      "question": "What is Amo Pay?",
+      "answer": "Amo Pay is a comprehensive digital wallet and financial services platform designed for seamless money transfers, currency exchange, and merchant services, primarily serving Rwanda and diaspora communities."
+    },
+    {
+      "category": "General",
+      "question": "Which languages does Amo Pay support?",
+      "answer": "Amo Pay supports English and Kinyarwanda. The AMO Assistant replies in whichever language you use."
+    },
+    {
+      "category": "General",
+      "question": "How do I contact support?",
+      "answer": "Email us at support@amopay.com or call +250 700 000 000. Support is available Monday to Friday, 8AM to 6PM Kigali time."
+    },
+    {
+      "category": "General",
+      "question": "What is the AMO Assistant?",
+      "answer": "AMO Assistant is your built-in AI helper. It guides you through the app, answers questions in English or Kinyarwanda, and helps you with all Amo Pay features 24/7."
+    },
+    {
+      "category": "General",
+      "question": "How do I view my transaction history?",
+      "answer": "Go to Home → History to see all your past transactions, receipts, and detailed records."
+    }
+
+  ]
+}

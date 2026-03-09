@@ -1,0 +1,201 @@
+{
+    "app_identity": {
+        "name": "Amo Pay",
+        "slug": "amo_mobile_clean",
+        "scheme": "amopay",
+        "version": "1.0.0",
+        "purpose": "A comprehensive digital wallet and financial services platform designed for seamless money transfers, currency exchange, and merchant services.",
+        "owner": "hyacintheee"
+    },
+    "local_context": {
+        "primary_region": "Kigali, Rwanda",
+        "timezone": "Africa/Kigali",
+        "languages": [
+            "Kinyarwanda",
+            "English"
+        ],
+        "currency_support": [
+            "RWF",
+            "USD",
+            "EUR",
+            "GBP",
+            "PLN"
+        ]
+    },
+    "user_guides": {
+        "sending_money": {
+            "steps": [
+                "Select 'Send Money' from the dashboard or sidebar.",
+                "Enter the amount you wish to send in your local currency (e.g., PLN, USD).",
+                "View the real-time exchange rate and the amount the recipient will receive in RWF.",
+                "Lock the rate (valid for 300 seconds/5 minutes) to ensure no changes during processing.",
+                "Provide recipient details: Name, Source of Funds, and Rwanda Phone Number (+250 format).",
+                "Choose delivery method: Mobile Money or Bank Transfer.",
+                "Complete payment using Card, BLIK (Poland), Apple Pay, or Google Pay.",
+                "Generate and share the transaction receipt."
+            ],
+            "limits_and_fees": {
+                "max_transfer": "5,000,000 RWF per transaction",
+                "flat_fees": "5 PLN, 2 USD, 2 EUR, or 2 GBP depending on your account currency."
+            }
+        },
+        "identity_verification_kyc": {
+            "purpose": "Required for higher transaction limits and enhanced security.",
+            "requirements": [
+                "National ID or Passport (Front & Back photos)",
+                "Clear Selfie in a well-lit environment",
+                "Proof of Address document"
+            ],
+            "process": "Upload or take photos using the in-app camera. Review all documents before final submission."
+        },
+        "merchant_services": {
+            "how_to_register": "Fill in Business Name, Business Phone, and optional physical address. You can also add your MoMo or Airtel codes.",
+            "benefits": "Accept payments via QR code, manage sales through the Merchant Scanner, and view detailed merchant-specific analytics.",
+            "tools": [
+                "Merchant QR: Personalized QR code for customers to scan.",
+                "Merchant Scanner: Integrated tool to process payments quickly.",
+                "Merchant Info: Manage your business profile."
+            ]
+        },
+        "currency_exchange": "Swap currencies instantly at competitive rates. The app provides daily rate updates and AI-powered guidance on the best times to exchange.",
+        "security_tips": [
+            "Enable Face ID or Biometric Authentication for secure and fast login.",
+            "Never share your OTP or password with anyone.",
+            "Amo Pay uses SecureStore to protect your tokens and sensitive data."
+        ]
+    },
+    "support_and_help": {
+        "amo_assistant": {
+            "capabilities": [
+                "Multi-lingual support (English & Kinyarwanda)",
+                "App navigation guidance",
+                "Personalized greetings (Kigali time-aware)"
+            ],
+            "quick_prompts": [
+                "How to send money?",
+                "How to pay bills?",
+                "How to swap currencies?",
+                "How to become a merchant?"
+            ]
+        },
+        "help_center": "Access detailed history, troubleshooting for KYC, and guide for all financial services."
+    },
+    "amo_rules_and_limits": {
+        "transactions": {
+            "max_amount": 999999999.99,
+            "decimal_precision": 2,
+            "min_amount": 0.01
+        },
+        "authentication": {
+            "password_requirements": {
+                "min_length": 8,
+                "max_length": 128,
+                "require_uppercase": true,
+                "require_lowercase": true,
+                "require_number": true,
+                "require_special_char": true
+            },
+            "otp_length": "4-8 digits"
+        },
+        "validation": {
+            "phone_number": "7-15 digits (Rwanda specifically: +250 7[2,3,8,9]...)",
+            "account_number": "8-34 alphanumeric characters",
+            "name_length": "2-100 characters"
+        }
+    },
+    "error_handling": {
+        "api_policies": {
+            "retry_attempts": 3,
+            "timeout_ms": 60000,
+            "auto_refresh_on_401": true
+        },
+        "troubleshooting": {
+            "kyc_failure": "Ensure photos are clear, well-lit, and all edges of the ID are visible.",
+            "rate_expired": "Rate locks last 5 minutes. If it expires, simply refresh to get the latest rate.",
+            "payment_declined": "Check with your bank for limits or try an alternative method like BLIK or Apple/Google Pay."
+        }
+    },
+    "project_structure": {
+        "framework": "Expo / React Native",
+        "core_directories": {
+            "app": "File-based routing (tabs and screens)",
+            "components": "Reusable UI elements and business components",
+            "services": "Business logic and API service layers",
+            "utils": "Helper functions for validation, security, and API communication",
+            "constants": "Environment-specific configurations and themes"
+        }
+    },
+    "api_integration": {
+        "base_url": "https://unrevived-unpolemically-ossie.ngrok-free.dev",
+        "auth_mechanism": "Bearer Token (JWT)",
+        "token_storage": "SecureStore (Expo)",
+        "refresh_logic": "Silent sync and auto-refresh on authentication failure"
+    },
+  "account_states": {
+    "unverified": "User can browse but cannot send money. Must complete KYC first.",
+    "kyc_pending": "Documents submitted, under review. Usually takes 24-48 hours.",
+    "kyc_verified": "Full access to all features and higher transaction limits.",
+    "suspended": "Account flagged. User must contact support at support@amopay.com"
+  },
+
+  "error_messages": {
+    "insufficient_balance": "Your wallet balance is too low. Please top up and try again.",
+    "invalid_recipient": "Recipient phone number not found. Check the number and try again.",
+    "session_expired": "Your session has expired. Please log in again.",
+    "rate_expired": "Exchange rate expired after 5 minutes. Refresh to get latest rate.",
+    "kyc_required": "This action requires identity verification. Please complete KYC first.",
+    "payment_declined": "Payment declined by your bank. Try another payment method."
+  },
+
+  "amo_assistant_rules": {
+    "can_help_with": [
+      "How to send money",
+      "How to exchange currencies",
+      "How to become a merchant",
+      "How to complete KYC",
+      "Understanding fees and limits",
+      "App navigation guidance",
+      "Transaction status questions",
+      "Security tips"
+    ],
+    "cannot_help_with": [
+      "Reversing or cancelling transactions",
+      "Changing account passwords directly",
+      "Accessing user account details",
+      "Legal or tax advice"
+    ],
+    "escalate_to_human": [
+      "Suspicious account activity",
+      "Account suspended or locked",
+      "Failed transactions not resolved",
+      "KYC rejected multiple times"
+    ]
+  },
+
+  "support_contacts": {
+    "email": "support@amopay.com",
+    "phone": "+250 700 000 000",
+    "hours": "Monday to Friday, 8AM - 6PM (Kigali time)",
+    "social": {
+      "twitter": "@amopay",
+      "instagram": "@amopay"
+    }
+  },
+
+  "screen_routes": {
+    "home": "/(tabs)/home",
+    "send_money": "/send-money",
+    "exchange": "/exchange",
+    "pay_bills": "/bills",
+    "merchant_scanner": "/merchant/scanner",
+    "merchant_qr": "/merchant/qr",
+    "merchant_register": "/merchant/register",
+    "analytics": "/analytics",
+    "kyc": "/kyc",
+    "profile": "/profile",
+    "settings": "/settings",
+    "translator": "/translator",
+    "assistant": "/assistant",
+    "history": "/history"
+  }
+}
