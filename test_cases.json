@@ -1,0 +1,832 @@
+{
+  "test_cases": [
+    {
+      "id": "EN_SM_001",
+      "language": "English",
+      "category": "Sending Money",
+      "question": "How do I send money to Rwanda?",
+      "expected_topics": [
+        "send money",
+        "mobile money",
+        "bank transfer"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_SM_002",
+      "language": "English",
+      "category": "Sending Money",
+      "question": "What is the maximum I can send in one go?",
+      "expected_topics": [
+        "5,000,000 RWF",
+        "limit"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_SM_003",
+      "language": "English",
+      "category": "Sending Money",
+      "question": "How much are the transfer fees?",
+      "expected_topics": [
+        "5 PLN",
+        "2 USD",
+        "2 EUR",
+        "2 GBP",
+        "fees"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_EX_001",
+      "language": "English",
+      "category": "Currency Exchange",
+      "question": "Which currencies can I swap in the app?",
+      "expected_topics": [
+        "RWF",
+        "USD",
+        "EUR",
+        "GBP",
+        "PLN"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_MS_001",
+      "language": "English",
+      "category": "Merchant Services",
+      "question": "How do I become a merchant on Amo Pay?",
+      "expected_topics": [
+        "Become a Merchant",
+        "Profile"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_KYC_001",
+      "language": "English",
+      "category": "KYC & Verification",
+      "question": "What documents do I need for verification?",
+      "expected_topics": [
+        "National ID",
+        "Passport",
+        "Selfie"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_SEC_001",
+      "language": "English",
+      "category": "Account & Security",
+      "question": "Can I log in with Face ID?",
+      "expected_topics": [
+        "Face ID",
+        "Biometrics",
+        "mobile"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_OOS_001",
+      "language": "English",
+      "category": "Out of Scope",
+      "question": "What is the capital of Poland?",
+      "expected_topics": [
+        "only assist with Amo Pay"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_OOS_002",
+      "language": "English",
+      "category": "Out of Scope",
+      "question": "How to cook pasta?",
+      "expected_topics": [
+        "only assist with Amo Pay"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "RW_SM_001",
+      "language": "Kinyarwanda",
+      "category": "Kohereza Amafaranga",
+      "question": "Nokohereza nte amafaranga mu Rwanda?",
+      "expected_topics": [
+        "Ohereza",
+        "amafaranga",
+        "mobile money"
+      ],
+      "expected_language": "Kinyarwanda"
+    },
+    {
+      "id": "RW_FEE_001",
+      "language": "Kinyarwanda",
+      "category": "Fees & Limits",
+      "question": "Amafaranga y'urugendo ni ayahe?",
+      "expected_topics": [
+        "fees",
+        "amafaranga"
+      ],
+      "expected_language": "Kinyarwanda"
+    },
+    {
+      "id": "EN_TRB_001",
+      "language": "English",
+      "category": "Troubleshooting",
+      "question": "My payment was declined, what do I do?",
+      "expected_topics": [
+        "bank limits",
+        "BLIK",
+        "Apple Pay"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_POL_001",
+      "language": "English",
+      "category": "Policy & Security",
+      "question": "What is your data protection policy?",
+      "expected_topics": [
+        "AES-256",
+        "GDPR",
+        "encryption"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_SEC_002",
+      "language": "English",
+      "category": "Account & Security",
+      "question": "Hacked account, what now?",
+      "expected_topics": [
+        "+250 700 000 000",
+        "immediately"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_NAV_001",
+      "language": "English",
+      "category": "App Navigation",
+      "question": "Where is the scanner?",
+      "expected_topics": [
+        "Merchant Scanner",
+        "Mobile Only"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_OOS_003",
+      "language": "English",
+      "category": "Out of Scope",
+      "question": "Who is the president of USA?",
+      "expected_topics": [
+        "Amo Pay"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "RW_OOS_001",
+      "language": "Kinyarwanda",
+      "category": "Out of Scope",
+      "question": "Amakuru y'iminsi y'icyumweru ameze ate?",
+      "expected_topics": [
+        "Amo Pay"
+      ],
+      "expected_language": "Kinyarwanda"
+    },
+    {
+      "id": "EN_OOS_004",
+      "language": "English",
+      "category": "Out of Scope",
+      "question": "Best investment strategy for stocks?",
+      "expected_topics": [
+        "Amo Pay"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_OOS_005",
+      "language": "English",
+      "category": "Out of Scope",
+      "question": "Can you write code for me?",
+      "expected_topics": [
+        "Amo Pay"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_OOS_006",
+      "language": "English",
+      "category": "Out of Scope",
+      "question": "Weather in Kigali tomorrow?",
+      "expected_topics": [
+        "Amo Pay"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_OOS_007",
+      "language": "English",
+      "category": "Out of Scope",
+      "question": "How to build a rockets?",
+      "expected_topics": [
+        "Amo Pay"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_OOS_008",
+      "language": "English",
+      "category": "Out of Scope",
+      "question": "Tell me a joke.",
+      "expected_topics": [
+        "Amo Pay"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_OOS_009",
+      "language": "English",
+      "category": "Out of Scope",
+      "question": "Who won the World Cup?",
+      "expected_topics": [
+        "Amo Pay"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_OOS_010",
+      "language": "English",
+      "category": "Out of Scope",
+      "question": "Latest movie releases?",
+      "expected_topics": [
+        "Amo Pay"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_SM_004",
+      "language": "English",
+      "category": "Sending Money",
+      "question": "Mobile money limits?",
+      "expected_topics": [
+        "5,000,000 RWF"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_SM_005",
+      "language": "English",
+      "category": "Sending Money",
+      "question": "Rate lock duration?",
+      "expected_topics": [
+        "5 or 15 mins"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_FEE_002",
+      "language": "English",
+      "category": "Fees & Limits",
+      "question": "Transfer fee for 500 USD?",
+      "expected_topics": [
+        "2.00 USD"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_EX_002",
+      "language": "English",
+      "category": "Currency Exchange",
+      "question": "How to swap RWF to PLN?",
+      "expected_topics": [
+        "Exchange",
+        "Swap"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_MS_002",
+      "language": "English",
+      "category": "Merchant Services",
+      "question": "What is Merchant QR?",
+      "expected_topics": [
+        "QR codes"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_KYC_002",
+      "language": "English",
+      "category": "KYC & Verification",
+      "question": "How long for KYC approval?",
+      "expected_topics": [
+        "24h approval"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_SEC_003",
+      "language": "English",
+      "category": "Account & Security",
+      "question": "Password requirements?",
+      "expected_topics": [
+        "8-128 characters",
+        "special character"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_NAV_002",
+      "language": "English",
+      "category": "App Navigation",
+      "question": "Where are bills paid?",
+      "expected_topics": [
+        "Bills section"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_TRB_002",
+      "language": "English",
+      "category": "Troubleshooting",
+      "question": "KYC photo rejected?",
+      "expected_topics": [
+        "glare",
+        "blurry"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_POL_002",
+      "language": "English",
+      "category": "Policy & Security",
+      "question": "Refund policy?",
+      "expected_topics": [
+        "cannot be reversed"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_SEC_004",
+      "language": "English",
+      "category": "Account & Security",
+      "question": "Is MFA required?",
+      "expected_topics": [
+        "MFA",
+        "Required"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_NAV_003",
+      "language": "English",
+      "category": "App Navigation",
+      "question": "How to find support?",
+      "expected_topics": [
+        "contact support",
+        "amopay.com"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_SM_006",
+      "language": "English",
+      "category": "Sending Money",
+      "question": "Send from Germany?",
+      "expected_topics": [
+        "Germany",
+        "sending"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_FEE_003",
+      "language": "English",
+      "category": "Fees & Limits",
+      "question": "Withdrawal fees?",
+      "expected_topics": [
+        "1-2%"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_EX_003",
+      "language": "English",
+      "category": "Currency Exchange",
+      "question": "Real-time rates?",
+      "expected_topics": [
+        "updated every 60 seconds"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_MS_003",
+      "language": "English",
+      "category": "Merchant Services",
+      "question": "Merchant docs?",
+      "expected_topics": [
+        "RDB",
+        "TIN"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_KYC_003",
+      "language": "English",
+      "category": "KYC & Verification",
+      "question": "Proof of address?",
+      "expected_topics": [
+        "Requirements"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_POL_003",
+      "language": "English",
+      "category": "Policy & Security",
+      "question": "Fraud monitoring?",
+      "expected_topics": [
+        "Real-time transaction monitoring"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_OOS_011",
+      "language": "English",
+      "category": "Out of Scope",
+      "question": "How to dance?",
+      "expected_topics": [
+        "Amo Pay"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_OOS_012",
+      "language": "English",
+      "category": "Out of Scope",
+      "question": "Capital of France?",
+      "expected_topics": [
+        "Amo Pay"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_OOS_013",
+      "language": "English",
+      "category": "Out of Scope",
+      "question": "What is 2+2?",
+      "expected_topics": [
+        "Amo Pay"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_OOS_014",
+      "language": "English",
+      "category": "Out of Scope",
+      "question": "Tell me a poem.",
+      "expected_topics": [
+        "Amo Pay"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_OOS_015",
+      "language": "English",
+      "category": "Out of Scope",
+      "question": "Latest soccer scores?",
+      "expected_topics": [
+        "Amo Pay"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "RW_SM_002",
+      "language": "Kinyarwanda",
+      "category": "Kohereza Amafaranga",
+      "question": "Umupaka ni uwuhe?",
+      "expected_topics": [
+        "5,000,000 RWF"
+      ],
+      "expected_language": "Kinyarwanda"
+    },
+    {
+      "id": "RW_FEE_002",
+      "language": "Kinyarwanda",
+      "category": "Fees & Limits",
+      "question": "Hacibwa angahe?",
+      "expected_topics": [
+        "fees"
+      ],
+      "expected_language": "Kinyarwanda"
+    },
+    {
+      "id": "RW_EX_001",
+      "language": "Kinyarwanda",
+      "category": "Currency Exchange",
+      "question": "Guhindura RWF mu USD?",
+      "expected_topics": [
+        "Swap",
+        "Guhindura"
+      ],
+      "expected_language": "Kinyarwanda"
+    },
+    {
+      "id": "RW_MS_001",
+      "language": "Kinyarwanda",
+      "category": "Merchant Services",
+      "question": "Kuba umucuruzi?",
+      "expected_topics": [
+        "Become a Merchant"
+      ],
+      "expected_language": "Kinyarwanda"
+    },
+    {
+      "id": "RW_KYC_001",
+      "language": "Kinyarwanda",
+      "category": "KYC & Verification",
+      "question": "Verified gute?",
+      "expected_topics": [
+        "Indangamuntu"
+      ],
+      "expected_language": "Kinyarwanda"
+    },
+    {
+      "id": "RW_SEC_001",
+      "language": "Kinyarwanda",
+      "category": "Account & Security",
+      "question": "Security code?",
+      "expected_topics": [
+        "MFA"
+      ],
+      "expected_language": "Kinyarwanda"
+    },
+    {
+      "id": "RW_NAV_001",
+      "language": "Kinyarwanda",
+      "category": "App Navigation",
+      "question": "Home iri he?",
+      "expected_topics": [
+        "Dashboard"
+      ],
+      "expected_language": "Kinyarwanda"
+    },
+    {
+      "id": "RW_TRB_001",
+      "language": "Kinyarwanda",
+      "category": "Troubleshooting",
+      "question": "Ntabwo mbona rate.",
+      "expected_topics": [
+        "vugurura"
+      ],
+      "expected_language": "Kinyarwanda"
+    },
+    {
+      "id": "RW_POL_001",
+      "language": "Kinyarwanda",
+      "category": "Policy & Security",
+      "question": "Verified kuki?",
+      "expected_topics": [
+        "GDPR"
+      ],
+      "expected_language": "Kinyarwanda"
+    },
+    {
+      "id": "EN_OOS_016",
+      "language": "English",
+      "category": "Out of Scope",
+      "question": "How to make tea?",
+      "expected_topics": [
+        "Amo Pay"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_OOS_017",
+      "language": "English",
+      "category": "Out of Scope",
+      "question": "Who is Elon Musk?",
+      "expected_topics": [
+        "Amo Pay"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_OOS_018",
+      "language": "English",
+      "category": "Out of Scope",
+      "question": "What is the moon made of?",
+      "expected_topics": [
+        "Amo Pay"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_OOS_019",
+      "language": "English",
+      "category": "Out of Scope",
+      "question": "How to drive?",
+      "expected_topics": [
+        "Amo Pay"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_OOS_020",
+      "language": "English",
+      "category": "Out of Scope",
+      "question": "Explain quantum physics.",
+      "expected_topics": [
+        "Amo Pay"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_NAV_004",
+      "language": "English",
+      "category": "App Navigation",
+      "question": "Find my profile.",
+      "expected_topics": [
+        "Profile",
+        "Settings"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_NAV_005",
+      "language": "English",
+      "category": "App Navigation",
+      "question": "Language settings?",
+      "expected_topics": [
+        "English",
+        "Kinyarwanda"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_NAV_006",
+      "language": "English",
+      "category": "App Navigation",
+      "question": "App version?",
+      "expected_topics": [
+        "Settings"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_GEN_001",
+      "language": "English",
+      "category": "General",
+      "question": "What is Amo Pay?",
+      "expected_topics": [
+        "digital financial ecosystem"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_GEN_002",
+      "language": "English",
+      "category": "General",
+      "question": "Who owns this app?",
+      "expected_topics": [
+        "Amo Pay Group"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_GEN_003",
+      "language": "English",
+      "category": "General",
+      "question": "Contact info?",
+      "expected_topics": [
+        "support@amopay.com"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_GEN_004",
+      "language": "English",
+      "category": "General",
+      "question": "Kigali address?",
+      "expected_topics": [
+        "Headquartered in Kigali"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_FEE_004",
+      "language": "English",
+      "category": "Fees & Limits",
+      "question": "Is there a monthly fee?",
+      "expected_topics": [
+        "no monthly fee"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_FEE_005",
+      "language": "English",
+      "category": "Fees & Limits",
+      "question": "Max daily send?",
+      "expected_topics": [
+        "10,000,000 RWF"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_SEC_005",
+      "language": "English",
+      "category": "Account & Security",
+      "question": "Identity theft?",
+      "expected_topics": [
+        "suspicious activity"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_TRB_003",
+      "language": "English",
+      "category": "Troubleshooting",
+      "question": "Irembo payment not going through.",
+      "expected_topics": [
+        "internet connection",
+        "support"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_TRB_004",
+      "language": "English",
+      "category": "Troubleshooting",
+      "question": "App crashing on login.",
+      "expected_topics": [
+        "update app",
+        "contact support"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_POL_004",
+      "language": "English",
+      "category": "Policy & Security",
+      "question": "Terms of Service location?",
+      "expected_topics": [
+        "footer links",
+        "amopay.com"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_OOS_021",
+      "language": "English",
+      "category": "Out of Scope",
+      "question": "Best restaurant in Paris?",
+      "expected_topics": [
+        "Amo Pay"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_OOS_022",
+      "language": "English",
+      "category": "Out of Scope",
+      "question": "How to swim?",
+      "expected_topics": [
+        "Amo Pay"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_OOS_023",
+      "language": "English",
+      "category": "Out of Scope",
+      "question": "Translate 'hello' to Spanish.",
+      "expected_topics": [
+        "Amo Pay"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_OOS_024",
+      "language": "English",
+      "category": "Out of Scope",
+      "question": "How many days in a year?",
+      "expected_topics": [
+        "Amo Pay"
+      ],
+      "expected_language": "English"
+    },
+    {
+      "id": "EN_OOS_025",
+      "language": "English",
+      "category": "Out of Scope",
+      "question": "What is the speed of light?",
+      "expected_topics": [
+        "Amo Pay"
+      ],
+      "expected_language": "English"
+    }
+  ]
+}

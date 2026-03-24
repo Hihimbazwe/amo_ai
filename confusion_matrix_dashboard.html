@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMO Pay AI — Performance Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #05070a;
+            --surface: #0f1116;
+            --border: #1e2330;
+            --accent: #00e5a0;
+            --secondary: #4f8aff;
+            --tp: #00e5a0;
+            --fp: #ffb547;
+            --tn: #4f8aff;
+            --fn: #ff4f6a;
+            --text: #e8eaf0;
+            --muted: #6b7280;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            padding: 50px 20px;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 50px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: 32px;
+            font-weight: 800;
+            background: linear-gradient(90deg, var(--accent), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: var(--muted);
+            letter-spacing: 1px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-family: 'Syne', sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--muted);
+        }
+
+        .main-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+        .card-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+        }
+
+        .matrix {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .matrix-cell {
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        .tp {
+            background: rgba(0, 229, 160, 0.1);
+            color: var(--tp);
+            border: 1px solid rgba(0, 229, 160, 0.2);
+        }
+
+        .fp {
+            background: rgba(255, 181, 71, 0.1);
+            color: var(--fp);
+            border: 1px solid rgba(255, 181, 71, 0.2);
+        }
+
+        .tn {
+            background: rgba(79, 138, 255, 0.1);
+            color: var(--tn);
+            border: 1px solid rgba(79, 138, 255, 0.2);
+        }
+
+        .fn {
+            background: rgba(255, 79, 106, 0.1);
+            color: var(--fn);
+            border: 1px solid rgba(255, 79, 106, 0.2);
+        }
+
+        .cell-label {
+            display: block;
+            font-size: 10px;
+            font-weight: 600;
+            opacity: 0.7;
+            margin-bottom: 5px;
+        }
+
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .results-table th {
+            text-align: left;
+            padding: 15px;
+            font-size: 11px;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .results-table td {
+            padding: 15px;
+            font-size: 13px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .badge {
+            padding: 4px 10px;
+            border-radius: 30px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        canvas {
+            max-height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <h1>AMO AI Performance</h1>
+                <p style="color: var(--muted); font-size: 14px; margin-top: 5px;">Production-Grade AI Evaluation
+                    Dashboard</p>
+            </div>
+            <div class="timestamp" id="ts">Loading metrics...</div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="f1">-</div>
+                <div class="stat-label">F1 Score</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="acc">-</div>
+                <div class="stat-label">Accuracy</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="prec">-</div>
+                <div class="stat-label">Precision</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="rec">-</div>
+                <div class="stat-label">Recall</div>
+            </div>
+        </div>
+
+        <div class="main-layout">
+            <div class="card">
+                <div class="card-title">Confusion Matrix</div>
+                <div class="matrix">
+                    <div class="matrix-cell tp"><span class="cell-label">TP</span><span id="val-tp">0</span></div>
+                    <div class="matrix-cell fp"><span class="cell-label">FP</span><span id="val-fp">0</span></div>
+                    <div class="matrix-cell fn"><span class="cell-label">FN</span><span id="val-fn">0</span></div>
+                    <div class="matrix-cell tn"><span class="cell-label">TN</span><span id="val-tn">0</span></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">Category Coverage Analysis</div>
+                <canvas id="catChart"></canvas>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Detailed Performance Log</div>
+            <table class="results-table" id="results">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Category</th>
+                        <th>Question</th>
+                        <th>Result</th>
+                        <th>Coverage</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        async function init() {
+            try {
+                const r = await fetch('eval_results.json');
+                const d = await r.json();
+                const s = d.summary;
+
+                document.getElementById('f1').innerText = s.metrics.f1_score + '%';
+                document.getElementById('acc').innerText = s.metrics.accuracy + '%';
+                document.getElementById('prec').innerText = s.metrics.precision + '%';
+                document.getElementById('rec').innerText = s.metrics.recall + '%';
+                document.getElementById('ts').innerText = 'VERIFIED AT: ' + new Date(d.timestamp).toLocaleString();
+
+                document.getElementById('val-tp').innerText = s.TP;
+                document.getElementById('val-fp').innerText = s.FP;
+                document.getElementById('val-tn').innerText = s.TN;
+                document.getElementById('val-fn').innerText = s.FN;
+
+                const cats = Object.keys(s.by_category);
+                new Chart(document.getElementById('catChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: cats,
+                        datasets: [{
+                            label: 'Avg Coverage %',
+                            data: cats.map(c => s.by_category[c].avg_coverage),
+                            backgroundColor: '#4f8aff',
+                            borderRadius: 10
+                        }]
+                    },
+                    options: {
+                        plugins: { legend: { display: false } },
+                        scales: { y: { beginAtZero: true, max: 100, grid: { color: '#1e2330' } }, x: { grid: { display: false } } }
+                    }
+                });
+
+                const tb = document.querySelector('#results tbody');
+                d.results.slice(0, 30).forEach(res => {
+                    const row = tb.insertRow();
+                    row.innerHTML = `
+                        <td>${res.id}</td>
+                        <td style="color: var(--muted)">${res.category}</td>
+                        <td>${res.question.substring(0, 45)}...</td>
+                        <td><span class="badge ${res.result_class.toLowerCase()}">${res.result_class}</span></td>
+                        <td style="font-weight: 700">${res.coverage_score}%</td>
+                        <td>${res.response_time}s</td>
+                    `;
+                });
+            } catch (e) {
+                console.error(e);
+            }
+        }
+        init();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AMO AI Evaluation Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#09090b;color:#f4f4f5;font-family:Inter,sans-serif;padding:40px 24px}
+.wrap{max-width:1200px;margin:0 auto}
+h1{font-size:28px;font-weight:800;background:linear-gradient(90deg,#00e5a0,#4f8aff);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:4px}
+p.sub{color:#71717a;font-size:13px;margin-bottom:36px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:36px}
+.card{background:#18181b;border:1px solid #27272a;border-radius:16px;padding:24px;text-align:center}
+.val{font-size:32px;font-weight:800;color:#00e5a0}
+.lbl{font-size:11px;color:#71717a;text-transform:uppercase;letter-spacing:1px;margin-top:6px}
+.grid2{display:grid;grid-template-columns:1fr 1.4fr;gap:24px;margin-bottom:36px}
+.panel{background:#18181b;border:1px solid #27272a;border-radius:16px;padding:24px}
+.ptitle{font-size:12px;font-weight:700;color:#52525b;text-transform:uppercase;letter-spacing:2px;margin-bottom:20px}
+.matrix{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mc{border-radius:12px;padding:24px;text-align:center;font-size:28px;font-weight:800}
+.tp{background:rgba(34,197,94,.1);color:#22c55e;border:1px solid rgba(34,197,94,.2)}
+.fp{background:rgba(245,158,11,.1);color:#f59e0b;border:1px solid rgba(245,158,11,.2)}
+.tn{background:rgba(59,130,246,.1);color:#3b82f6;border:1px solid rgba(59,130,246,.2)}
+.fn{background:rgba(239,68,68,.1);color:#ef4444;border:1px solid rgba(239,68,68,.2)}
+.mc span{display:block;font-size:10px;font-weight:600;opacity:.6;margin-bottom:4px}
+table{width:100%;border-collapse:collapse;background:#18181b;border:1px solid #27272a;
+  border-radius:16px;overflow:hidden;margin-top:0}
+th{background:#27272a;padding:12px 16px;text-align:left;font-size:10px;color:#71717a;
+  text-transform:uppercase;letter-spacing:1px}
+td{padding:11px 16px;font-size:12px;border-bottom:1px solid #1f1f22;vertical-align:top}
+tr:last-child td{border:none}
+tr:hover td{background:rgba(255,255,255,.02)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>AMO AI Evaluation</h1>
+  <p class="sub">Last run: 2026-03-13T02:02:36.491477 &nbsp;|&nbsp; Total tests: 79</p>
+
+  <div class="cards">
+    <div class="card"><div class="val">46.6%</div><div class="lbl">F1 Score</div></div>
+    <div class="card"><div class="val">39.2%</div><div class="lbl">Accuracy</div></div>
+    <div class="card"><div class="val" style="color:#4f8aff">91.3%</div><div class="lbl">Precision</div></div>
+    <div class="card"><div class="val" style="color:#f59e0b">31.3%</div><div class="lbl">Recall</div></div>
+  </div>
+
+  <div class="grid2">
+    <div class="panel">
+      <div class="ptitle">Confusion Matrix</div>
+      <div class="matrix">
+        <div class="mc tp"><span>TP — Correct answers</span>21</div>
+        <div class="mc fp"><span>FP — Wrong language</span>2</div>
+        <div class="mc fn"><span>FN — Missed answers</span>46</div>
+        <div class="mc tn"><span>TN — OOS blocked</span>10</div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="ptitle">Coverage by Category</div>
+      <canvas id="cat" style="max-height:220px"></canvas>
+    </div>
+  </div>
+
+  <div class="panel" style="overflow-x:auto">
+    <div class="ptitle" style="margin-bottom:16px">Detailed Test Results</div>
+    <table>
+      <thead><tr>
+        <th>ID</th><th>Category</th><th>Question</th>
+        <th>Result</th><th>Coverage</th><th>Time</th>
+      </tr></thead>
+      <tbody><tr><td>EN_SM_001</td><td style='color:#71717a'>Sending Money</td><td>How do I send money to Rwanda?…</td><td><b style='color:#ef4444'>FN</b></td><td>33.3%</td><td>4.09s</td></tr><tr><td>EN_SM_002</td><td style='color:#71717a'>Sending Money</td><td>What is the maximum I can send in one go?…</td><td><b style='color:#ef4444'>FN</b></td><td>0.0%</td><td>0.27s</td></tr><tr><td>EN_SM_003</td><td style='color:#71717a'>Sending Money</td><td>How much are the transfer fees?…</td><td><b style='color:#888'>N/A</b></td><td>0%</td><td>0s</td></tr><tr><td>EN_EX_001</td><td style='color:#71717a'>Currency Exchange</td><td>Which currencies can I swap in the app?…</td><td><b style='color:#888'>N/A</b></td><td>0%</td><td>0s</td></tr><tr><td>EN_MS_001</td><td style='color:#71717a'>Merchant Services</td><td>How do I become a merchant on Amo Pay?…</td><td><b style='color:#888'>N/A</b></td><td>0%</td><td>0s</td></tr><tr><td>EN_KYC_001</td><td style='color:#71717a'>KYC &amp; Verification</td><td>What documents do I need for verification?…</td><td><b style='color:#888'>N/A</b></td><td>0%</td><td>0s</td></tr><tr><td>EN_SEC_001</td><td style='color:#71717a'>Account &amp; Security</td><td>Can I log in with Face ID?…</td><td><b style='color:#888'>N/A</b></td><td>0%</td><td>0s</td></tr><tr><td>EN_OOS_001</td><td style='color:#71717a'>Out of Scope</td><td>What is the capital of Poland?…</td><td><b style='color:#888'>N/A</b></td><td>0%</td><td>0s</td></tr><tr><td>EN_OOS_002</td><td style='color:#71717a'>Out of Scope</td><td>How to cook pasta?…</td><td><b style='color:#888'>N/A</b></td><td>0%</td><td>0s</td></tr><tr><td>RW_SM_001</td><td style='color:#71717a'>Kohereza Amafaranga</td><td>Nokohereza nte amafaranga mu Rwanda?…</td><td><b style='color:#888'>N/A</b></td><td>0%</td><td>0s</td></tr><tr><td>RW_FEE_001</td><td style='color:#71717a'>Fees &amp; Limits</td><td>Amafaranga y'urugendo ni ayahe?…</td><td><b style='color:#888'>N/A</b></td><td>0%</td><td>0s</td></tr><tr><td>EN_TRB_001</td><td style='color:#71717a'>Troubleshooting</td><td>My payment was declined, what do I do?…</td><td><b style='color:#888'>N/A</b></td><td>0%</td><td>0s</td></tr><tr><td>EN_POL_001</td><td style='color:#71717a'>Policy &amp; Security</td><td>What is your data protection policy?…</td><td><b style='color:#888'>N/A</b></td><td>0%</td><td>0s</td></tr><tr><td>EN_SEC_002</td><td style='color:#71717a'>Account &amp; Security</td><td>Hacked account, what now?…</td><td><b style='color:#22c55e'>TP</b></td><td>100.0%</td><td>2.5s</td></tr><tr><td>EN_NAV_001</td><td style='color:#71717a'>App Navigation</td><td>Where is the scanner?…</td><td><b style='color:#ef4444'>FN</b></td><td>0.0%</td><td>0.27s</td></tr><tr><td>EN_OOS_003</td><td style='color:#71717a'>Out of Scope</td><td>Who is the president of USA?…</td><td><b style='color:#3b82f6'>TN</b></td><td>0.0%</td><td>1.84s</td></tr><tr><td>RW_OOS_001</td><td style='color:#71717a'>Out of Scope</td><td>Amakuru y'iminsi y'icyumweru ameze ate?…</td><td><b style='color:#f59e0b'>FP</b></td><td>100.0%</td><td>0.27s</td></tr><tr><td>EN_OOS_004</td><td style='color:#71717a'>Out of Scope</td><td>Best investment strategy for stocks?…</td><td><b style='color:#3b82f6'>TN</b></td><td>0.0%</td><td>2.04s</td></tr><tr><td>EN_OOS_005</td><td style='color:#71717a'>Out of Scope</td><td>Can you write code for me?…</td><td><b style='color:#ef4444'>FN</b></td><td>100.0%</td><td>0.28s</td></tr><tr><td>EN_OOS_006</td><td style='color:#71717a'>Out of Scope</td><td>Weather in Kigali tomorrow?…</td><td><b style='color:#3b82f6'>TN</b></td><td>0.0%</td><td>2.29s</td></tr><tr><td>EN_OOS_007</td><td style='color:#71717a'>Out of Scope</td><td>How to build a rockets?…</td><td><b style='color:#ef4444'>FN</b></td><td>100.0%</td><td>0.26s</td></tr><tr><td>EN_OOS_008</td><td style='color:#71717a'>Out of Scope</td><td>Tell me a joke.…</td><td><b style='color:#ef4444'>FN</b></td><td>100.0%</td><td>0.27s</td></tr><tr><td>EN_OOS_009</td><td style='color:#71717a'>Out of Scope</td><td>Who won the World Cup?…</td><td><b style='color:#ef4444'>FN</b></td><td>100.0%</td><td>0.27s</td></tr><tr><td>EN_OOS_010</td><td style='color:#71717a'>Out of Scope</td><td>Latest movie releases?…</td><td><b style='color:#3b82f6'>TN</b></td><td>0.0%</td><td>2.27s</td></tr><tr><td>EN_SM_004</td><td style='color:#71717a'>Sending Money</td><td>Mobile money limits?…</td><td><b style='color:#22c55e'>TP</b></td><td>100.0%</td><td>2.29s</td></tr><tr><td>EN_SM_005</td><td style='color:#71717a'>Sending Money</td><td>Rate lock duration?…</td><td><b style='color:#ef4444'>FN</b></td><td>0.0%</td><td>1.86s</td></tr><tr><td>EN_FEE_002</td><td style='color:#71717a'>Fees &amp; Limits</td><td>Transfer fee for 500 USD?…</td><td><b style='color:#22c55e'>TP</b></td><td>100.0%</td><td>1.68s</td></tr><tr><td>EN_EX_002</td><td style='color:#71717a'>Currency Exchange</td><td>How to swap RWF to PLN?…</td><td><b style='color:#ef4444'>FN</b></td><td>0.0%</td><td>0.26s</td></tr><tr><td>EN_MS_002</td><td style='color:#71717a'>Merchant Services</td><td>What is Merchant QR?…</td><td><b style='color:#ef4444'>FN</b></td><td>0.0%</td><td>2.2s</td></tr><tr><td>EN_KYC_002</td><td style='color:#71717a'>KYC &amp; Verification</td><td>How long for KYC approval?…</td><td><b style='color:#ef4444'>FN</b></td><td>0.0%</td><td>1.99s</td></tr><tr><td>EN_SEC_003</td><td style='color:#71717a'>Account &amp; Security</td><td>Password requirements?…</td><td><b style='color:#22c55e'>TP</b></td><td>50.0%</td><td>2.54s</td></tr><tr><td>EN_NAV_002</td><td style='color:#71717a'>App Navigation</td><td>Where are bills paid?…</td><td><b style='color:#ef4444'>FN</b></td><td>0.0%</td><td>1.77s</td></tr><tr><td>EN_TRB_002</td><td style='color:#71717a'>Troubleshooting</td><td>KYC photo rejected?…</td><td><b style='color:#22c55e'>TP</b></td><td>100.0%</td><td>2.37s</td></tr><tr><td>EN_POL_002</td><td style='color:#71717a'>Policy &amp; Security</td><td>Refund policy?…</td><td><b style='color:#ef4444'>FN</b></td><td>0.0%</td><td>1.49s</td></tr><tr><td>EN_SEC_004</td><td style='color:#71717a'>Account &amp; Security</td><td>Is MFA required?…</td><td><b style='color:#ef4444'>FN</b></td><td>0.0%</td><td>1.43s</td></tr><tr><td>EN_NAV_003</td><td style='color:#71717a'>App Navigation</td><td>How to find support?…</td><td><b style='color:#22c55e'>TP</b></td><td>50.0%</td><td>3.42s</td></tr><tr><td>EN_SM_006</td><td style='color:#71717a'>Sending Money</td><td>Send from Germany?…</td><td><b style='color:#22c55e'>TP</b></td><td>100.0%</td><td>3.16s</td></tr><tr><td>EN_FEE_003</td><td style='color:#71717a'>Fees &amp; Limits</td><td>Withdrawal fees?…</td><td><b style='color:#22c55e'>TP</b></td><td>100.0%</td><td>2.33s</td></tr><tr><td>EN_EX_003</td><td style='color:#71717a'>Currency Exchange</td><td>Real-time rates?…</td><td><b style='color:#22c55e'>TP</b></td><td>100.0%</td><td>2.51s</td></tr><tr><td>EN_MS_003</td><td style='color:#71717a'>Merchant Services</td><td>Merchant docs?…</td><td><b style='color:#22c55e'>TP</b></td><td>100.0%</td><td>2.53s</td></tr><tr><td>EN_KYC_003</td><td style='color:#71717a'>KYC &amp; Verification</td><td>Proof of address?…</td><td><b style='color:#ef4444'>FN</b></td><td>0.0%</td><td>1.42s</td></tr><tr><td>EN_POL_003</td><td style='color:#71717a'>Policy &amp; Security</td><td>Fraud monitoring?…</td><td><b style='color:#22c55e'>TP</b></td><td>100.0%</td><td>2.02s</td></tr><tr><td>EN_OOS_011</td><td style='color:#71717a'>Out of Scope</td><td>How to dance?…</td><td><b style='color:#3b82f6'>TN</b></td><td>0.0%</td><td>2.01s</td></tr><tr><td>EN_OOS_012</td><td style='color:#71717a'>Out of Scope</td><td>Capital of France?…</td><td><b style='color:#3b82f6'>TN</b></td><td>0.0%</td><td>1.91s</td></tr><tr><td>EN_OOS_013</td><td style='color:#71717a'>Out of Scope</td><td>What is 2+2?…</td><td><b style='color:#ef4444'>FN</b></td><td>100.0%</td><td>0.27s</td></tr><tr><td>EN_OOS_014</td><td style='color:#71717a'>Out of Scope</td><td>Tell me a poem.…</td><td><b style='color:#ef4444'>FN</b></td><td>100.0%</td><td>0.27s</td></tr><tr><td>EN_OOS_015</td><td style='color:#71717a'>Out of Scope</td><td>Latest soccer scores?…</td><td><b style='color:#3b82f6'>TN</b></td><td>0.0%</td><td>2.16s</td></tr><tr><td>RW_SM_002</td><td style='color:#71717a'>Kohereza Amafaranga</td><td>Umupaka ni uwuhe?…</td><td><b style='color:#ef4444'>FN</b></td><td>0.0%</td><td>1.92s</td></tr><tr><td>RW_FEE_002</td><td style='color:#71717a'>Fees &amp; Limits</td><td>Hacibwa angahe?…</td><td><b style='color:#ef4444'>FN</b></td><td>0.0%</td><td>1.93s</td></tr><tr><td>RW_EX_001</td><td style='color:#71717a'>Currency Exchange</td><td>Guhindura RWF mu USD?…</td><td><b style='color:#ef4444'>FN</b></td><td>0.0%</td><td>0.27s</td></tr><tr><td>RW_MS_001</td><td style='color:#71717a'>Merchant Services</td><td>Kuba umucuruzi?…</td><td><b style='color:#f59e0b'>FP</b></td><td>100.0%</td><td>2.57s</td></tr><tr><td>RW_KYC_001</td><td style='color:#71717a'>KYC &amp; Verification</td><td>Verified gute?…</td><td><b style='color:#ef4444'>FN</b></td><td>0.0%</td><td>2.78s</td></tr><tr><td>RW_SEC_001</td><td style='color:#71717a'>Account &amp; Security</td><td>Security code?…</td><td><b style='color:#ef4444'>FN</b></td><td>0.0%</td><td>2.2s</td></tr><tr><td>RW_NAV_001</td><td style='color:#71717a'>App Navigation</td><td>Home iri he?…</td><td><b style='color:#ef4444'>FN</b></td><td>0.0%</td><td>1.9s</td></tr><tr><td>RW_TRB_001</td><td style='color:#71717a'>Troubleshooting</td><td>Ntabwo mbona rate.…</td><td><b style='color:#ef4444'>FN</b></td><td>0.0%</td><td>1.59s</td></tr><tr><td>RW_POL_001</td><td style='color:#71717a'>Policy &amp; Security</td><td>Verified kuki?…</td><td><b style='color:#ef4444'>FN</b></td><td>0.0%</td><td>2.2s</td></tr><tr><td>EN_OOS_016</td><td style='color:#71717a'>Out of Scope</td><td>How to make tea?…</td><td><b style='color:#ef4444'>FN</b></td><td>100.0%</td><td>0.26s</td></tr><tr><td>EN_OOS_017</td><td style='color:#71717a'>Out of Scope</td><td>Who is Elon Musk?…</td><td><b style='color:#ef4444'>FN</b></td><td>100.0%</td><td>0.27s</td></tr><tr><td>EN_OOS_018</td><td style='color:#71717a'>Out of Scope</td><td>What is the moon made of?…</td><td><b style='color:#ef4444'>FN</b></td><td>100.0%</td><td>0.27s</td></tr><tr><td>EN_OOS_019</td><td style='color:#71717a'>Out of Scope</td><td>How to drive?…</td><td><b style='color:#3b82f6'>TN</b></td><td>0.0%</td><td>1.91s</td></tr><tr><td>EN_OOS_020</td><td style='color:#71717a'>Out of Scope</td><td>Explain quantum physics.…</td><td><b style='color:#3b82f6'>TN</b></td><td>0.0%</td><td>1.86s</td></tr><tr><td>EN_NAV_004</td><td style='color:#71717a'>App Navigation</td><td>Find my profile.…</td><td><b style='color:#22c55e'>TP</b></td><td>50.0%</td><td>3.3s</td></tr><tr><td>EN_NAV_005</td><td style='color:#71717a'>App Navigation</td><td>Language settings?…</td><td><b style='color:#22c55e'>TP</b></td><td>50.0%</td><td>2.1s</td></tr><tr><td>EN_NAV_006</td><td style='color:#71717a'>App Navigation</td><td>App version?…</td><td><b style='color:#ef4444'>FN</b></td><td>0.0%</td><td>2.1s</td></tr><tr><td>EN_GEN_001</td><td style='color:#71717a'>General</td><td>What is Amo Pay?…</td><td><b style='color:#22c55e'>TP</b></td><td>100.0%</td><td>2.57s</td></tr><tr><td>EN_GEN_002</td><td style='color:#71717a'>General</td><td>Who owns this app?…</td><td><b style='color:#ef4444'>FN</b></td><td>0.0%</td><td>0.27s</td></tr><tr><td>EN_GEN_003</td><td style='color:#71717a'>General</td><td>Contact info?…</td><td><b style='color:#22c55e'>TP</b></td><td>100.0%</td><td>2.5s</td></tr><tr><td>EN_GEN_004</td><td style='color:#71717a'>General</td><td>Kigali address?…</td><td><b style='color:#22c55e'>TP</b></td><td>100.0%</td><td>2.15s</td></tr><tr><td>EN_FEE_004</td><td style='color:#71717a'>Fees &amp; Limits</td><td>Is there a monthly fee?…</td><td><b style='color:#ef4444'>FN</b></td><td>0.0%</td><td>2.62s</td></tr><tr><td>EN_FEE_005</td><td style='color:#71717a'>Fees &amp; Limits</td><td>Max daily send?…</td><td><b style='color:#22c55e'>TP</b></td><td>100.0%</td><td>2.0s</td></tr><tr><td>EN_SEC_005</td><td style='color:#71717a'>Account &amp; Security</td><td>Identity theft?…</td><td><b style='color:#22c55e'>TP</b></td><td>100.0%</td><td>2.61s</td></tr><tr><td>EN_TRB_003</td><td style='color:#71717a'>Troubleshooting</td><td>Irembo payment not going through.…</td><td><b style='color:#22c55e'>TP</b></td><td>50.0%</td><td>4.24s</td></tr><tr><td>EN_TRB_004</td><td style='color:#71717a'>Troubleshooting</td><td>App crashing on login.…</td><td><b style='color:#22c55e'>TP</b></td><td>50.0%</td><td>2.63s</td></tr><tr><td>EN_POL_004</td><td style='color:#71717a'>Policy &amp; Security</td><td>Terms of Service location?…</td><td><b style='color:#22c55e'>TP</b></td><td>50.0%</td><td>0.26s</td></tr><tr><td>EN_OOS_021</td><td style='color:#71717a'>Out of Scope</td><td>Best restaurant in Paris?…</td><td><b style='color:#ef4444'>FN</b></td><td>100.0%</td><td>0.27s</td></tr><tr><td>EN_OOS_022</td><td style='color:#71717a'>Out of Scope</td><td>How to swim?…</td><td><b style='color:#3b82f6'>TN</b></td><td>0.0%</td><td>1.89s</td></tr><tr><td>EN_OOS_023</td><td style='color:#71717a'>Out of Scope</td><td>Translate 'hello' to Spanish.…</td><td><b style='color:#ef4444'>FN</b></td><td>100.0%</td><td>0.27s</td></tr><tr><td>EN_OOS_024</td><td style='color:#71717a'>Out of Scope</td><td>How many days in a year?…</td><td><b style='color:#ef4444'>FN</b></td><td>100.0%</td><td>0.27s</td></tr><tr><td>EN_OOS_025</td><td style='color:#71717a'>Out of Scope</td><td>What is the speed of light?…</td><td><b style='color:#ef4444'>FN</b></td><td>100.0%</td><td>0.26s</td></tr></tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+new Chart(document.getElementById("cat"), {
+  type: "bar",
+  data: {
+    labels: ["Sending Money", "Account & Security", "App Navigation", "Out of Scope", "Fees & Limits", "Currency Exchange", "Merchant Services", "KYC & Verification", "Troubleshooting", "Policy & Security", "Kohereza Amafaranga", "General"],
+    datasets: [{
+      label: "Avg Coverage %",
+      data: [46.7, 50.0, 21.4, 58.3, 60.0, 33.3, 66.7, 0.0, 50.0, 37.5, 0.0, 75.0],
+      backgroundColor: "#4f8aff",
+      borderRadius: 8
+    }]
+  },
+  options: {
+    plugins: { legend: { display: false } },
+    scales: {
+      y: { beginAtZero: true, max: 100, grid: { color: "#27272a" }, ticks: { color: "#71717a" } },
+      x: { grid: { display: false }, ticks: { color: "#71717a", font: { size: 10 } } }
+    }
+  }
+});
+</script>
+</body>
+</html>

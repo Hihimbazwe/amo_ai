@@ -1,0 +1,1616 @@
+{
+  "timestamp": "2026-03-13T02:02:36.491477",
+  "summary": {
+    "total": 79,
+    "TP": 21,
+    "FP": 2,
+    "TN": 10,
+    "FN": 46,
+    "language_correct": 58,
+    "language_wrong": 10,
+    "high_coverage": 36,
+    "low_coverage": 32,
+    "by_category": {
+      "Sending Money": {
+        "total": 5,
+        "TP": 2,
+        "FP": 0,
+        "TN": 0,
+        "FN": 3,
+        "avg_coverage": 46.7
+      },
+      "Account & Security": {
+        "total": 5,
+        "TP": 3,
+        "FP": 0,
+        "TN": 0,
+        "FN": 2,
+        "avg_coverage": 50.0
+      },
+      "App Navigation": {
+        "total": 7,
+        "TP": 3,
+        "FP": 0,
+        "TN": 0,
+        "FN": 4,
+        "avg_coverage": 21.4
+      },
+      "Out of Scope": {
+        "total": 24,
+        "TP": 0,
+        "FP": 1,
+        "TN": 10,
+        "FN": 13,
+        "avg_coverage": 58.3
+      },
+      "Fees & Limits": {
+        "total": 5,
+        "TP": 3,
+        "FP": 0,
+        "TN": 0,
+        "FN": 2,
+        "avg_coverage": 60.0
+      },
+      "Currency Exchange": {
+        "total": 3,
+        "TP": 1,
+        "FP": 0,
+        "TN": 0,
+        "FN": 2,
+        "avg_coverage": 33.3
+      },
+      "Merchant Services": {
+        "total": 3,
+        "TP": 1,
+        "FP": 1,
+        "TN": 0,
+        "FN": 1,
+        "avg_coverage": 66.7
+      },
+      "KYC & Verification": {
+        "total": 3,
+        "TP": 0,
+        "FP": 0,
+        "TN": 0,
+        "FN": 3,
+        "avg_coverage": 0.0
+      },
+      "Troubleshooting": {
+        "total": 4,
+        "TP": 3,
+        "FP": 0,
+        "TN": 0,
+        "FN": 1,
+        "avg_coverage": 50.0
+      },
+      "Policy & Security": {
+        "total": 4,
+        "TP": 2,
+        "FP": 0,
+        "TN": 0,
+        "FN": 2,
+        "avg_coverage": 37.5
+      },
+      "Kohereza Amafaranga": {
+        "total": 1,
+        "TP": 0,
+        "FP": 0,
+        "TN": 0,
+        "FN": 1,
+        "avg_coverage": 0.0
+      },
+      "General": {
+        "total": 4,
+        "TP": 3,
+        "FP": 0,
+        "TN": 0,
+        "FN": 1,
+        "avg_coverage": 75.0
+      }
+    },
+    "by_language": {
+      "English": {
+        "total": 58,
+        "language_correct": 58,
+        "avg_coverage": 53.2,
+        "language_accuracy": 100.0
+      },
+      "Kinyarwanda": {
+        "total": 10,
+        "language_correct": 0,
+        "avg_coverage": 20.0,
+        "language_accuracy": 0.0
+      }
+    },
+    "metrics": {
+      "precision": 91.3,
+      "recall": 31.3,
+      "f1_score": 46.6,
+      "accuracy": 39.2,
+      "language_accuracy": 73.4
+    }
+  },
+  "results": [
+    {
+      "id": "EN_SM_001",
+      "category": "Sending Money",
+      "language": "English",
+      "question": "How do I send money to Rwanda?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 33.3,
+      "topics_covered": [
+        "send money"
+      ],
+      "topics_missing": [
+        "mobile money",
+        "bank transfer"
+      ],
+      "result_class": "FN",
+      "response_time": 4.09,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "To send money to Rwanda using Amo Pay, follow these steps:\n\n1. Log in to your Amo Pay account on the app or website.\n2. Navigate to the \"Money Transfer\" section.\n3. Select the \"International Transfer\" option.\n4. Choose the country of origin (EU, UK, USA, etc.) and the destination as Rwanda.\n5. Enter the recipient's details, including their phone number and name.\n6. Select the transfer method (Card, BLIK, Apple Pay, Google Pay, etc.).\n7. Review the transfer details, including the exchange rate and fees.\n8. Confirm the transfer to send the money.\n\nPlease note that you can also lock the exchange rate for 5 or 15 minutes to avoid any rate fluctuations. Additionally, Amo Pay offers the lowest market fees for international transfers.\n\nIf you have any issues or concerns, you can contact our support team at support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_SM_002",
+      "category": "Sending Money",
+      "language": "English",
+      "question": "What is the maximum I can send in one go?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "5,000,000 RWF",
+        "limit"
+      ],
+      "result_class": "FN",
+      "response_time": 0.27,
+      "model_used": "unknown",
+      "ai_reply": "I can only assist with Amo Pay related questions. Please ask something about our services or contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_SM_003",
+      "language": "English",
+      "category": "Sending Money",
+      "question": "How much are the transfer fees?",
+      "expected_topics": [
+        "5 PLN",
+        "2 USD",
+        "2 EUR",
+        "2 GBP",
+        "fees"
+      ],
+      "expected_language": "English",
+      "status": "ERROR",
+      "error": "All connection attempts failed",
+      "response": null
+    },
+    {
+      "id": "EN_EX_001",
+      "language": "English",
+      "category": "Currency Exchange",
+      "question": "Which currencies can I swap in the app?",
+      "expected_topics": [
+        "RWF",
+        "USD",
+        "EUR",
+        "GBP",
+        "PLN"
+      ],
+      "expected_language": "English",
+      "status": "ERROR",
+      "error": "All connection attempts failed",
+      "response": null
+    },
+    {
+      "id": "EN_MS_001",
+      "language": "English",
+      "category": "Merchant Services",
+      "question": "How do I become a merchant on Amo Pay?",
+      "expected_topics": [
+        "Become a Merchant",
+        "Profile"
+      ],
+      "expected_language": "English",
+      "status": "ERROR",
+      "error": "All connection attempts failed",
+      "response": null
+    },
+    {
+      "id": "EN_KYC_001",
+      "language": "English",
+      "category": "KYC & Verification",
+      "question": "What documents do I need for verification?",
+      "expected_topics": [
+        "National ID",
+        "Passport",
+        "Selfie"
+      ],
+      "expected_language": "English",
+      "status": "ERROR",
+      "error": "All connection attempts failed",
+      "response": null
+    },
+    {
+      "id": "EN_SEC_001",
+      "language": "English",
+      "category": "Account & Security",
+      "question": "Can I log in with Face ID?",
+      "expected_topics": [
+        "Face ID",
+        "Biometrics",
+        "mobile"
+      ],
+      "expected_language": "English",
+      "status": "ERROR",
+      "error": "All connection attempts failed",
+      "response": null
+    },
+    {
+      "id": "EN_OOS_001",
+      "language": "English",
+      "category": "Out of Scope",
+      "question": "What is the capital of Poland?",
+      "expected_topics": [
+        "only assist with Amo Pay"
+      ],
+      "expected_language": "English",
+      "status": "ERROR",
+      "error": "All connection attempts failed",
+      "response": null
+    },
+    {
+      "id": "EN_OOS_002",
+      "language": "English",
+      "category": "Out of Scope",
+      "question": "How to cook pasta?",
+      "expected_topics": [
+        "only assist with Amo Pay"
+      ],
+      "expected_language": "English",
+      "status": "ERROR",
+      "error": "All connection attempts failed",
+      "response": null
+    },
+    {
+      "id": "RW_SM_001",
+      "language": "Kinyarwanda",
+      "category": "Kohereza Amafaranga",
+      "question": "Nokohereza nte amafaranga mu Rwanda?",
+      "expected_topics": [
+        "Ohereza",
+        "amafaranga",
+        "mobile money"
+      ],
+      "expected_language": "Kinyarwanda",
+      "status": "ERROR",
+      "error": "All connection attempts failed",
+      "response": null
+    },
+    {
+      "id": "RW_FEE_001",
+      "language": "Kinyarwanda",
+      "category": "Fees & Limits",
+      "question": "Amafaranga y'urugendo ni ayahe?",
+      "expected_topics": [
+        "fees",
+        "amafaranga"
+      ],
+      "expected_language": "Kinyarwanda",
+      "status": "ERROR",
+      "error": "All connection attempts failed",
+      "response": null
+    },
+    {
+      "id": "EN_TRB_001",
+      "language": "English",
+      "category": "Troubleshooting",
+      "question": "My payment was declined, what do I do?",
+      "expected_topics": [
+        "bank limits",
+        "BLIK",
+        "Apple Pay"
+      ],
+      "expected_language": "English",
+      "status": "ERROR",
+      "error": "All connection attempts failed",
+      "response": null
+    },
+    {
+      "id": "EN_POL_001",
+      "language": "English",
+      "category": "Policy & Security",
+      "question": "What is your data protection policy?",
+      "expected_topics": [
+        "AES-256",
+        "GDPR",
+        "encryption"
+      ],
+      "expected_language": "English",
+      "status": "ERROR",
+      "error": "All connection attempts failed",
+      "response": null
+    },
+    {
+      "id": "EN_SEC_002",
+      "category": "Account & Security",
+      "language": "English",
+      "question": "Hacked account, what now?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "+250 700 000 000",
+        "immediately"
+      ],
+      "topics_missing": [],
+      "result_class": "TP",
+      "response_time": 2.5,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "For a hacked account, please contact our emergency support line immediately at +250 700 000 000. Our team will assist you in resolving the issue and securing your account.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_NAV_001",
+      "category": "App Navigation",
+      "language": "English",
+      "question": "Where is the scanner?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "Merchant Scanner",
+        "Mobile Only"
+      ],
+      "result_class": "FN",
+      "response_time": 0.27,
+      "model_used": "unknown",
+      "ai_reply": "I can only assist with Amo Pay related questions. Please ask something about our services or contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_OOS_003",
+      "category": "Out of Scope",
+      "language": "English",
+      "question": "Who is the president of USA?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "Amo Pay"
+      ],
+      "result_class": "TN",
+      "response_time": 1.84,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "I'm sorry, I don't have specific information on that. Please contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "RW_OOS_001",
+      "category": "Out of Scope",
+      "language": "Kinyarwanda",
+      "question": "Amakuru y'iminsi y'icyumweru ameze ate?",
+      "expected_language": "Kinyarwanda",
+      "detected_language": "English",
+      "language_correct": false,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "Amo Pay"
+      ],
+      "topics_missing": [],
+      "result_class": "FP",
+      "response_time": 0.27,
+      "model_used": "unknown",
+      "ai_reply": "I can only assist with Amo Pay related questions. Please ask something about our services or contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_OOS_004",
+      "category": "Out of Scope",
+      "language": "English",
+      "question": "Best investment strategy for stocks?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "Amo Pay"
+      ],
+      "result_class": "TN",
+      "response_time": 2.04,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "I'm sorry, I don't have specific information on investment strategies for stocks. Please contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_OOS_005",
+      "category": "Out of Scope",
+      "language": "English",
+      "question": "Can you write code for me?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "Amo Pay"
+      ],
+      "topics_missing": [],
+      "result_class": "FN",
+      "response_time": 0.28,
+      "model_used": "unknown",
+      "ai_reply": "I can only assist with Amo Pay related questions. Please ask something about our services or contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_OOS_006",
+      "category": "Out of Scope",
+      "language": "English",
+      "question": "Weather in Kigali tomorrow?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "Amo Pay"
+      ],
+      "result_class": "TN",
+      "response_time": 2.29,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "I'm sorry, I don't have specific information on the weather in Kigali. Please contact a reliable weather service or check a weather app for the latest forecast.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_OOS_007",
+      "category": "Out of Scope",
+      "language": "English",
+      "question": "How to build a rockets?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "Amo Pay"
+      ],
+      "topics_missing": [],
+      "result_class": "FN",
+      "response_time": 0.26,
+      "model_used": "unknown",
+      "ai_reply": "I can only assist with Amo Pay related questions. Please ask something about our services or contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_OOS_008",
+      "category": "Out of Scope",
+      "language": "English",
+      "question": "Tell me a joke.",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "Amo Pay"
+      ],
+      "topics_missing": [],
+      "result_class": "FN",
+      "response_time": 0.27,
+      "model_used": "unknown",
+      "ai_reply": "I can only assist with Amo Pay related questions. Please ask something about our services or contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_OOS_009",
+      "category": "Out of Scope",
+      "language": "English",
+      "question": "Who won the World Cup?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "Amo Pay"
+      ],
+      "topics_missing": [],
+      "result_class": "FN",
+      "response_time": 0.27,
+      "model_used": "unknown",
+      "ai_reply": "I can only assist with Amo Pay related questions. Please ask something about our services or contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_OOS_010",
+      "category": "Out of Scope",
+      "language": "English",
+      "question": "Latest movie releases?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "Amo Pay"
+      ],
+      "result_class": "TN",
+      "response_time": 2.27,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "I'm sorry, I don't have specific information on the latest movie releases. Please contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_SM_004",
+      "category": "Sending Money",
+      "language": "English",
+      "question": "Mobile money limits?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "5,000,000 RWF"
+      ],
+      "topics_missing": [],
+      "result_class": "TP",
+      "response_time": 2.29,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "According to our knowledge, for Local Transfer (Rwanda) using Mobile Money (MTN, Airtel), the limits are:\n\n- Minimum: 500 RWF\n- Maximum per transaction: 5,000,000 RWF\n- Daily maximum: 10,000,000 RWF",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_SM_005",
+      "category": "Sending Money",
+      "language": "English",
+      "question": "Rate lock duration?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "5 or 15 mins"
+      ],
+      "result_class": "FN",
+      "response_time": 1.86,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "According to the provided knowledge, the Rate Lock duration for International Transfers is 5 or 15 minutes.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_FEE_002",
+      "category": "Fees & Limits",
+      "language": "English",
+      "question": "Transfer fee for 500 USD?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "2.00 USD"
+      ],
+      "topics_missing": [],
+      "result_class": "TP",
+      "response_time": 1.68,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "According to the provided knowledge, the transfer fee for USD is 2.00 USD.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_EX_002",
+      "category": "Currency Exchange",
+      "language": "English",
+      "question": "How to swap RWF to PLN?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "Exchange",
+        "Swap"
+      ],
+      "result_class": "FN",
+      "response_time": 0.26,
+      "model_used": "unknown",
+      "ai_reply": "I can only assist with Amo Pay related questions. Please ask something about our services or contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_MS_002",
+      "category": "Merchant Services",
+      "language": "English",
+      "question": "What is Merchant QR?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "QR codes"
+      ],
+      "result_class": "FN",
+      "response_time": 2.2,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "Merchant QR is a tool provided by Amo Pay's merchant services. It is a static or dynamic QR code that merchants can use to receive payments from customers. This feature is available on both the web and mobile platforms.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_KYC_002",
+      "category": "KYC & Verification",
+      "language": "English",
+      "question": "How long for KYC approval?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "24h approval"
+      ],
+      "result_class": "FN",
+      "response_time": 1.99,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "According to the provided knowledge, the KYC approval process for merchants takes 24 hours after uploading the required business documents.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_SEC_003",
+      "category": "Account & Security",
+      "language": "English",
+      "question": "Password requirements?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 50.0,
+      "topics_covered": [
+        "special character"
+      ],
+      "topics_missing": [
+        "8-128 characters"
+      ],
+      "result_class": "TP",
+      "response_time": 2.54,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "According to the provided knowledge, the password policy for Amo Pay is as follows:\n\n* The password must be between 8 and 128 characters long.\n* It must include at least one Uppercase letter.\n* It must include at least one Lowercase letter.\n* It must include at least one Number.\n* It must include at least one Special Character.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_NAV_002",
+      "category": "App Navigation",
+      "language": "English",
+      "question": "Where are bills paid?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "Bills section"
+      ],
+      "result_class": "FN",
+      "response_time": 1.77,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "Bills can be paid in the \"Bills\" section on the Home/Dashboard.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_TRB_002",
+      "category": "Troubleshooting",
+      "language": "English",
+      "question": "KYC photo rejected?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "glare",
+        "blurry"
+      ],
+      "topics_missing": [],
+      "result_class": "TP",
+      "response_time": 2.37,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "I'm sorry, I don't have specific information on why a KYC photo was rejected. However, according to our knowledge, to avoid rejection, please ensure that your ID document photos are:\n\n- Clear and not blurry\n- Free from glare\n- Valid (not expired)\n\nIf you're still experiencing issues, please refer to our knowledge base for more general troubleshooting steps or contact support@amopay.com for further assistance.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_POL_002",
+      "category": "Policy & Security",
+      "language": "English",
+      "question": "Refund policy?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "cannot be reversed"
+      ],
+      "result_class": "FN",
+      "response_time": 1.49,
+      "model_used": "unknown",
+      "ai_reply": "System busy. Please try again or visit amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_SEC_004",
+      "category": "Account & Security",
+      "language": "English",
+      "question": "Is MFA required?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "MFA",
+        "Required"
+      ],
+      "result_class": "FN",
+      "response_time": 1.43,
+      "model_used": "unknown",
+      "ai_reply": "System busy. Please try again or visit amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_NAV_003",
+      "category": "App Navigation",
+      "language": "English",
+      "question": "How to find support?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 50.0,
+      "topics_covered": [
+        "amopay.com"
+      ],
+      "topics_missing": [
+        "contact support"
+      ],
+      "result_class": "TP",
+      "response_time": 3.42,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "You can find support for Amo Pay through the following channels:\n\n1. **Online Chat**: Available 24/7 on the Amo Pay app or website.\n2. **Phone Support**: Available from 8 AM to 6 PM Central African Time (CAT) at +250 700 000 000.\n3. **Email**: Send an email to support@amopay.com.\n4. **Official Email**: You can also find the official email address in the \"Business Rules\" section of the knowledge base under \"support_hours\".\n\nIf you have a critical issue, such as a transaction reversal or a hacked account, please call +250 700 000 000 immediately for assistance.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_SM_006",
+      "category": "Sending Money",
+      "language": "English",
+      "question": "Send from Germany?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "Germany",
+        "sending"
+      ],
+      "topics_missing": [],
+      "result_class": "TP",
+      "response_time": 3.16,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "According to the provided knowledge, Germany is not listed as a supported sending region for Amo Pay. The supported sending regions are:\n\n- Poland\n- United Kingdom\n- Germany is not explicitly listed but France, Belgium are listed which are neighboring countries to Germany. \n- USA\n- Canada\n\nHowever, since Germany is not explicitly listed, I would recommend verifying this information with Amo Pay support to confirm the sending capabilities from Germany.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_FEE_003",
+      "category": "Fees & Limits",
+      "language": "English",
+      "question": "Withdrawal fees?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "1-2%"
+      ],
+      "topics_missing": [],
+      "result_class": "TP",
+      "response_time": 2.33,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "Withdrawal fees vary by bank or agent, typically ranging from 1-2%. For specific information on withdrawal fees, I recommend checking with your bank or agent directly. If you have any further questions or concerns, please contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_EX_003",
+      "category": "Currency Exchange",
+      "language": "English",
+      "question": "Real-time rates?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "updated every 60 seconds"
+      ],
+      "topics_missing": [],
+      "result_class": "TP",
+      "response_time": 2.51,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "Yes, Amo Pay's currency exchange service offers real-time rates, updated every 60 seconds. This ensures that you always get the most up-to-date exchange rates for your transactions.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_MS_003",
+      "category": "Merchant Services",
+      "language": "English",
+      "question": "Merchant docs?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "RDB",
+        "TIN"
+      ],
+      "topics_missing": [],
+      "result_class": "TP",
+      "response_time": 2.53,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "For merchant onboarding, you will need to provide the following documents:\n\n1. Business License (RDB) if applicable\n2. TIN Number\n3. Identity Document of Director\n4. Business Location / Shop Photo\n\nYou can find the detailed onboarding process in the \"merchant_onboarding\" section of our knowledge base.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_KYC_003",
+      "category": "KYC & Verification",
+      "language": "English",
+      "question": "Proof of address?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "Requirements"
+      ],
+      "result_class": "FN",
+      "response_time": 1.42,
+      "model_used": "unknown",
+      "ai_reply": "System busy. Please try again or visit amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_POL_003",
+      "category": "Policy & Security",
+      "language": "English",
+      "question": "Fraud monitoring?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "Real-time transaction monitoring"
+      ],
+      "topics_missing": [],
+      "result_class": "TP",
+      "response_time": 2.02,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "Amo Pay employs real-time transaction monitoring and automated account suspension for suspicious activity as part of its fraud prevention measures. This system helps to detect and prevent potential fraudulent transactions, ensuring a secure experience for users.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_OOS_011",
+      "category": "Out of Scope",
+      "language": "English",
+      "question": "How to dance?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "Amo Pay"
+      ],
+      "result_class": "TN",
+      "response_time": 2.01,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "I'm sorry, I don't have specific information on how to dance. Please contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_OOS_012",
+      "category": "Out of Scope",
+      "language": "English",
+      "question": "Capital of France?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "Amo Pay"
+      ],
+      "result_class": "TN",
+      "response_time": 1.91,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "I'm sorry, I don't have specific information on that. Please contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_OOS_013",
+      "category": "Out of Scope",
+      "language": "English",
+      "question": "What is 2+2?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "Amo Pay"
+      ],
+      "topics_missing": [],
+      "result_class": "FN",
+      "response_time": 0.27,
+      "model_used": "unknown",
+      "ai_reply": "I can only assist with Amo Pay related questions. Please ask something about our services or contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_OOS_014",
+      "category": "Out of Scope",
+      "language": "English",
+      "question": "Tell me a poem.",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "Amo Pay"
+      ],
+      "topics_missing": [],
+      "result_class": "FN",
+      "response_time": 0.27,
+      "model_used": "unknown",
+      "ai_reply": "I can only assist with Amo Pay related questions. Please ask something about our services or contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_OOS_015",
+      "category": "Out of Scope",
+      "language": "English",
+      "question": "Latest soccer scores?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "Amo Pay"
+      ],
+      "result_class": "TN",
+      "response_time": 2.16,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "I'm sorry, I don't have specific information on that. Please contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "RW_SM_002",
+      "category": "Kohereza Amafaranga",
+      "language": "Kinyarwanda",
+      "question": "Umupaka ni uwuhe?",
+      "expected_language": "Kinyarwanda",
+      "detected_language": "English",
+      "language_correct": false,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "5,000,000 RWF"
+      ],
+      "result_class": "FN",
+      "response_time": 1.92,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "I'm sorry, I don't have specific information on that. Please contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "RW_FEE_002",
+      "category": "Fees & Limits",
+      "language": "Kinyarwanda",
+      "question": "Hacibwa angahe?",
+      "expected_language": "Kinyarwanda",
+      "detected_language": "English",
+      "language_correct": false,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "fees"
+      ],
+      "result_class": "FN",
+      "response_time": 1.93,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "I'm sorry, I don't have specific information on that. Please contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "RW_EX_001",
+      "category": "Currency Exchange",
+      "language": "Kinyarwanda",
+      "question": "Guhindura RWF mu USD?",
+      "expected_language": "Kinyarwanda",
+      "detected_language": "English",
+      "language_correct": false,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "Swap",
+        "Guhindura"
+      ],
+      "result_class": "FN",
+      "response_time": 0.27,
+      "model_used": "unknown",
+      "ai_reply": "I can only assist with Amo Pay related questions. Please ask something about our services or contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "RW_MS_001",
+      "category": "Merchant Services",
+      "language": "Kinyarwanda",
+      "question": "Kuba umucuruzi?",
+      "expected_language": "Kinyarwanda",
+      "detected_language": "English",
+      "language_correct": false,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "Become a Merchant"
+      ],
+      "topics_missing": [],
+      "result_class": "FP",
+      "response_time": 2.57,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "Yes, you are a merchant. You can navigate to the \"Become a Merchant\" workflow in your profile to start the registration process. Please ensure you have all the required documents, such as a business license (RDB) if applicable, TIN number, identity document of the director, and a photo of the business location/shop.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "RW_KYC_001",
+      "category": "KYC & Verification",
+      "language": "Kinyarwanda",
+      "question": "Verified gute?",
+      "expected_language": "Kinyarwanda",
+      "detected_language": "Unknown",
+      "language_correct": false,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "Indangamuntu"
+      ],
+      "result_class": "FN",
+      "response_time": 2.78,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "Mwihangane, kinyamatazo cha Verified kinaweza kufikiwa baada ya kuhitaji mtu kuweka makamu ya kibinafsi, kupiga picha ya kibinafsi, na kuhitaji mtu kuweka makamu ya kibinafsi.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "RW_SEC_001",
+      "category": "Account & Security",
+      "language": "Kinyarwanda",
+      "question": "Security code?",
+      "expected_language": "Kinyarwanda",
+      "detected_language": "English",
+      "language_correct": false,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "MFA"
+      ],
+      "result_class": "FN",
+      "response_time": 2.2,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "I'm sorry, I don't have specific information on security codes. Please contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "RW_NAV_001",
+      "category": "App Navigation",
+      "language": "Kinyarwanda",
+      "question": "Home iri he?",
+      "expected_language": "Kinyarwanda",
+      "detected_language": "English",
+      "language_correct": false,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "Dashboard"
+      ],
+      "result_class": "FN",
+      "response_time": 1.9,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "I'm sorry, I don't have specific information on that. Please contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "RW_TRB_001",
+      "category": "Troubleshooting",
+      "language": "Kinyarwanda",
+      "question": "Ntabwo mbona rate.",
+      "expected_language": "Kinyarwanda",
+      "detected_language": "English",
+      "language_correct": false,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "vugurura"
+      ],
+      "result_class": "FN",
+      "response_time": 1.59,
+      "model_used": "unknown",
+      "ai_reply": "System busy. Please try again or visit amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "RW_POL_001",
+      "category": "Policy & Security",
+      "language": "Kinyarwanda",
+      "question": "Verified kuki?",
+      "expected_language": "Kinyarwanda",
+      "detected_language": "English",
+      "language_correct": false,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "GDPR"
+      ],
+      "result_class": "FN",
+      "response_time": 2.2,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "I'm sorry, I don't have specific information on what \"Verified kuki\" means in the context of Amo Pay. Please contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_OOS_016",
+      "category": "Out of Scope",
+      "language": "English",
+      "question": "How to make tea?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "Amo Pay"
+      ],
+      "topics_missing": [],
+      "result_class": "FN",
+      "response_time": 0.26,
+      "model_used": "unknown",
+      "ai_reply": "I can only assist with Amo Pay related questions. Please ask something about our services or contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_OOS_017",
+      "category": "Out of Scope",
+      "language": "English",
+      "question": "Who is Elon Musk?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "Amo Pay"
+      ],
+      "topics_missing": [],
+      "result_class": "FN",
+      "response_time": 0.27,
+      "model_used": "unknown",
+      "ai_reply": "I can only assist with Amo Pay related questions. Please ask something about our services or contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_OOS_018",
+      "category": "Out of Scope",
+      "language": "English",
+      "question": "What is the moon made of?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "Amo Pay"
+      ],
+      "topics_missing": [],
+      "result_class": "FN",
+      "response_time": 0.27,
+      "model_used": "unknown",
+      "ai_reply": "I can only assist with Amo Pay related questions. Please ask something about our services or contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_OOS_019",
+      "category": "Out of Scope",
+      "language": "English",
+      "question": "How to drive?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "Amo Pay"
+      ],
+      "result_class": "TN",
+      "response_time": 1.91,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "I'm sorry, I don't have specific information on driving. Please contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_OOS_020",
+      "category": "Out of Scope",
+      "language": "English",
+      "question": "Explain quantum physics.",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "Amo Pay"
+      ],
+      "result_class": "TN",
+      "response_time": 1.86,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "I'm sorry, I don't have specific information on quantum physics. Please contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_NAV_004",
+      "category": "App Navigation",
+      "language": "English",
+      "question": "Find my profile.",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 50.0,
+      "topics_covered": [
+        "Profile"
+      ],
+      "topics_missing": [
+        "Settings"
+      ],
+      "result_class": "TP",
+      "response_time": 3.3,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "To find your profile, please follow these steps:\n\n1. Open the Amo Pay app or log in to your account on the website.\n2. Tap or click on the profile icon (usually located at the top right corner).\n3. Your profile information should be displayed, including your name, email, and other relevant details.\n\nIf you're unable to find your profile or need further assistance, please contact our support team at support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_NAV_005",
+      "category": "App Navigation",
+      "language": "English",
+      "question": "Language settings?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 50.0,
+      "topics_covered": [
+        "English"
+      ],
+      "topics_missing": [
+        "Kinyarwanda"
+      ],
+      "result_class": "TP",
+      "response_time": 2.1,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "Your language settings are set to English. All responses will be in English.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_NAV_006",
+      "category": "App Navigation",
+      "language": "English",
+      "question": "App version?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "Settings"
+      ],
+      "result_class": "FN",
+      "response_time": 2.1,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "I'm sorry, I don't have specific information on the current version of the Amo Pay app. Please contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_GEN_001",
+      "category": "General",
+      "language": "English",
+      "question": "What is Amo Pay?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "digital financial ecosystem"
+      ],
+      "topics_missing": [],
+      "result_class": "TP",
+      "response_time": 2.57,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "Amo Pay is a professional-grade digital financial ecosystem for instant money transfers, currency exchange, and merchant services, specifically optimized for the Rwandan and European markets. It is headquartered in Kigali, Rwanda, with international operations.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_GEN_002",
+      "category": "General",
+      "language": "English",
+      "question": "Who owns this app?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "Amo Pay Group"
+      ],
+      "result_class": "FN",
+      "response_time": 0.27,
+      "model_used": "unknown",
+      "ai_reply": "I can only assist with Amo Pay related questions. Please ask something about our services or contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_GEN_003",
+      "category": "General",
+      "language": "English",
+      "question": "Contact info?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "support@amopay.com"
+      ],
+      "topics_missing": [],
+      "result_class": "TP",
+      "response_time": 2.5,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "You can contact Amo Pay support through the following channels:\n\n- Official Email: support@amopay.com\n- Phone: +250 700 000 000 (for lost cards or hacked accounts, please call immediately)\n- Online Chat: Available 24/7\n\nPlease note that phone support is available from 8 AM to 6 PM CAT.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_GEN_004",
+      "category": "General",
+      "language": "English",
+      "question": "Kigali address?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "Headquartered in Kigali"
+      ],
+      "topics_missing": [],
+      "result_class": "TP",
+      "response_time": 2.15,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "The Amo Pay Group is headquartered in Kigali, Rwanda. However, I don't have the specific address listed in the provided knowledge. \n\nPlease contact support@amopay.com for more information.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_FEE_004",
+      "category": "Fees & Limits",
+      "language": "English",
+      "question": "Is there a monthly fee?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "no monthly fee"
+      ],
+      "result_class": "FN",
+      "response_time": 2.62,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "I'm sorry, I don't have specific information on monthly fees for Amo Pay services. Please contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_FEE_005",
+      "category": "Fees & Limits",
+      "language": "English",
+      "question": "Max daily send?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "10,000,000 RWF"
+      ],
+      "topics_missing": [],
+      "result_class": "TP",
+      "response_time": 2.0,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "According to the provided knowledge, the maximum daily send limit for Local Transfer (Rwanda) is 10,000,000 RWF.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_SEC_005",
+      "category": "Account & Security",
+      "language": "English",
+      "question": "Identity theft?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "suspicious activity"
+      ],
+      "topics_missing": [],
+      "result_class": "TP",
+      "response_time": 2.61,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "If you suspect your account has been compromised due to identity theft, please contact our support team immediately at +250 700 000 000. We have a dedicated fraud prevention system in place to monitor and respond to suspicious activity.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_TRB_003",
+      "category": "Troubleshooting",
+      "language": "English",
+      "question": "Irembo payment not going through.",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 50.0,
+      "topics_covered": [
+        "support"
+      ],
+      "topics_missing": [
+        "internet connection"
+      ],
+      "result_class": "TP",
+      "response_time": 4.24,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "I'm sorry, I don't have specific information on why Irembo payments are not going through. However, I can suggest checking the following:\n\n1. Ensure that the Irembo payment link or QR code is correct and properly generated.\n2. Verify that the recipient's Irembo account is active and has sufficient balance.\n3. Check if there are any network issues or outages affecting Irembo services.\n4. Contact Irembo support directly to report the issue and seek assistance.\n\nIf you need further assistance or have questions about the Amo Pay platform, please contact our support team at support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_TRB_004",
+      "category": "Troubleshooting",
+      "language": "English",
+      "question": "App crashing on login.",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 50.0,
+      "topics_covered": [
+        "contact support"
+      ],
+      "topics_missing": [
+        "update app"
+      ],
+      "result_class": "TP",
+      "response_time": 2.63,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "I'm sorry, I don't have specific information on app crashes. Please contact support@amopay.com for assistance with resolving the issue. They will be able to provide you with the necessary support and troubleshooting steps to get your app up and running again.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_POL_004",
+      "category": "Policy & Security",
+      "language": "English",
+      "question": "Terms of Service location?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 50.0,
+      "topics_covered": [
+        "amopay.com"
+      ],
+      "topics_missing": [
+        "footer links"
+      ],
+      "result_class": "TP",
+      "response_time": 0.26,
+      "model_used": "unknown",
+      "ai_reply": "I can only assist with Amo Pay related questions. Please ask something about our services or contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_OOS_021",
+      "category": "Out of Scope",
+      "language": "English",
+      "question": "Best restaurant in Paris?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "Amo Pay"
+      ],
+      "topics_missing": [],
+      "result_class": "FN",
+      "response_time": 0.27,
+      "model_used": "unknown",
+      "ai_reply": "I can only assist with Amo Pay related questions. Please ask something about our services or contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_OOS_022",
+      "category": "Out of Scope",
+      "language": "English",
+      "question": "How to swim?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 0.0,
+      "topics_covered": [],
+      "topics_missing": [
+        "Amo Pay"
+      ],
+      "result_class": "TN",
+      "response_time": 1.89,
+      "model_used": "meta-llama/Llama-3.1-8B-Instruct:novita",
+      "ai_reply": "I'm sorry, I don't have specific information on swimming. Please contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_OOS_023",
+      "category": "Out of Scope",
+      "language": "English",
+      "question": "Translate 'hello' to Spanish.",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "Amo Pay"
+      ],
+      "topics_missing": [],
+      "result_class": "FN",
+      "response_time": 0.27,
+      "model_used": "unknown",
+      "ai_reply": "I can only assist with Amo Pay related questions. Please ask something about our services or contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_OOS_024",
+      "category": "Out of Scope",
+      "language": "English",
+      "question": "How many days in a year?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "Amo Pay"
+      ],
+      "topics_missing": [],
+      "result_class": "FN",
+      "response_time": 0.27,
+      "model_used": "unknown",
+      "ai_reply": "I can only assist with Amo Pay related questions. Please ask something about our services or contact support@amopay.com.",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "EN_OOS_025",
+      "category": "Out of Scope",
+      "language": "English",
+      "question": "What is the speed of light?",
+      "expected_language": "English",
+      "detected_language": "English",
+      "language_correct": true,
+      "coverage_score": 100.0,
+      "topics_covered": [
+        "Amo Pay"
+      ],
+      "topics_missing": [],
+      "result_class": "FN",
+      "response_time": 0.26,
+      "model_used": "unknown",
+      "ai_reply": "I can only assist with Amo Pay related questions. Please ask something about our services or contact support@amopay.com.",
+      "status": "SUCCESS"
+    }
+  ]
+}

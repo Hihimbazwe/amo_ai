@@ -1,223 +1,113 @@
 {
   "app_identity": {
     "name": "Amo Pay",
-    "purpose": "Isanduku y'ifaranga ryuzuye na serivisi z'imari zigamije kohereza amafaranga, guhindura ifaranga, na serivisi z'ubucuruzi.",
-    "welcome_message": "Murakaza neza kuri Amo Pay"
+    "purpose": "Isanduku y'ifaranga ryuzuye n'serivisi z'imari zigamije kohereza amafaranga, guhindura ifaranga, n'serivisi z'ubucuruzi."
   },
-  "local_context": {
-    "primary_region": "Umujyi wa Kigali, Rwanda",
-    "languages": [
-      "Ikinyarwanda",
-      "Icyongereza"
-    ],
-    "currency_support": {
-      "RWF": "Ifaranga ry'u Rwanda",
-      "USD": "Amadolari y'Amerika",
-      "EUR": "Amayuro",
-      "GBP": "Amapawundi y'Ubwongereza",
-      "PLN": "Izloty ya Polonye"
-    }
-  },
-  "user_guides": {
-    "kohereza_amafaranga": {
-      "title": "Ohereza Amafaranga",
+  "features": [
+    {
+      "id": "send_money",
+      "name": "Ohereza Amafaranga",
+      "platform": "both",
+      "description": "Ohereza amafaranga mu Rwanda ukoresheje Mobile Money cyangwa Banki. Igiciro kirafungwa kugira ngo kidahinduka.",
       "steps": [
-        "Hitamo 'Ohereza Amafaranga' ku kibaho cyangwa ku murongo w'ibice.",
-        "Injiza ingano y'amafaranga mu ifaranga ryawe (urugero: PLN, USD).",
-        "Reba igiciro cy'isimburanwa gifite ubu n'ingano umukiriya azahabwa mu RWF.",
-        "Fata igiciro (gihoraho amasegonda 300 / iminota 5) kugira ngo ntagihinduke mu gihe cy'ubwishyu.",
-        "Tanga amakuru y'uwakiriye: Izina, Inkomoko y'Amafaranga, na Numero ya Telefone ya Rwanda (+250).",
-        "Hitamo uburyo bwo gutanga: Amafaranga kuri Telefone cyangwa Kohereza kwa Banki.",
-        "Uzuza ubwishyu ukoresheje Ikarita, BLIK (Polonye), Apple Pay, cyangwa Google Pay.",
-        "Kora hanyuma usangire icyemezo cy'ubwishyu."
+        "Hitamo Ohereza",
+        "Injiza ingano",
+        "Reba igiciro",
+        "Fata igiciro (iminota 5)",
+        "Uza uwakiriye (+250)",
+        "Hitamo uburyo",
+        "Ishyura (Ikarita/BLIK/Apple/Google)"
       ],
-      "limits_and_fees": {
-        "max_transfer": "Umupaka ntarengwa wo kohereza ni 5,000,000 RWF ku nshuro imwe.",
-        "flat_fees": "Amafaranga y'ishyu ni: 5 PLN, 2 USD, 2 EUR, cyangwa 2 GBP bitewe n'ifaranga rya konti yawe."
-      }
+      "limits": "Umupaka ni 5,000,000 RWF",
+      "fees": "5 PLN, 2 USD, 2 EUR, cyangwa 2 GBP"
     },
-    "kugenzura_indangamuntu_kyc": {
-      "title": "Kugenzura Indangamuntu (KYC)",
-      "purpose": "Bisabwa kugira ngo ubone imipaka yo kohereza amafaranga myinshi no kurinda umutekano wa konti yawe.",
+    {
+      "id": "pay_bills",
+      "name": "Ishyura Fagitire",
+      "platform": "both",
+      "description": "Ishyura fagitire nk'umuriro (REG), amazi (WASAC), unit (MTN, Airtel), Irembo, na Televiziyo."
+    },
+    {
+      "id": "airtime_topup",
+      "name": "Kugura Unit",
+      "platform": "both",
+      "description": "Shyiramo unit kuri telefone iyo ari yo yose vuba."
+    },
+    {
+      "id": "currency_exchange",
+      "name": "Guhindura Ifaranga",
+      "platform": "both",
+      "description": "Hindura amafaranga hagati ya RWF, USD, EUR, GBP, na PLN."
+    },
+    {
+      "id": "kyc_verification",
+      "name": "Kugenzura Indangamuntu (KYC)",
+      "platform": "both",
       "requirements": [
-        "Indangamuntu y'Igihugu cyangwa Pasiporo (Amafoto imbere n'inyuma)",
-        "Ifoto nziza yawe mu cyumba cyaka urumuri",
+        "Indangamuntu cyangwa Pasiporo",
+        "Ifoto yawe (Selfie)",
         "Icyemezo cy'aho utura"
       ],
-      "process": "Ohereza cyangwa fata amafoto ukoresheje kamera yo mu gikoresho. Suzuma inyandiko zose mbere yo gutanga burundu."
+      "process": "Ni ngombwa kugira ngo wohereze amafaranga. Bisaba amasaha 24-48."
     },
-    "serivisi_z_ubucuruzi": {
-      "title": "Serivisi z'Ubucuruzi",
-      "how_to_register": "Uzuza Izina ry'Ubucuruzi, Telefone y'Ubucuruzi, n'aderesi y'imibereho (ntibisabwa). Ushobora kandi wongeraho kode za MoMo cyangwa Airtel.",
-      "benefits": "Emera kwishyurwa ukoresheje kode ya QR, gucunga ibikorwa by'ubucuruzi ukoresheje Igikoresho Gisoma cy'Umucuruzi, hanyuma urebe isesengura ry'ubucuruzi ryihariye.",
-      "tools": {
-        "merchant_qr": "Kode ya QR y'Umucuruzi: Kode ya QR ihariye abakiriya basoma kugira ngo bakwishyure.",
-        "merchant_scanner": "Igikoresho Gisoma cy'Umucuruzi: Igikoresho cyifashishwa mu gusoma amakuru yo kwishyura vuba.",
-        "merchant_info": "Amakuru y'Umucuruzi: Gucunga umwirondoro w'ubucuruzi bwawe."
-      }
+    {
+      "id": "merchant_scanner",
+      "name": "Isomero rya Marchande",
+      "platform": "mobile",
+      "description": "Igikoresho cy'abacuruzi gisoma kode za QR z'abakiriya.",
+      "access": "Biboneka kuri telefone gusa muri menu y'abacuruzi."
     },
-    "guhindura_ifaranga": {
-      "title": "Guhindura Ifaranga",
-      "description": "Hindura amafaranga vuba ku giciro gikomeye. Porogaramu itanga amakuru y'igiciro buri munsi n'ubuyobozi bwa AI ku bihe byiza byo guhindura."
+    {
+      "id": "merchant_qr",
+      "name": "Kode QR y'Umucuruzi",
+      "platform": "both",
+      "description": "Kode ya QR ihariye umucuruzi akoresha akira ubwishyu."
     },
-    "inama_z_umutekano": {
-      "title": "Inama z'Umutekano",
-      "tips": [
-        "Fungura Face ID cyangwa Kugenzura mu Mubiri kugira ngo winjire vuba no mu mutekano.",
-        "Ntuhe na umwe OTP cyangwa ijambo ryawe ry'ibanga.",
-        "Amo Pay ikoresha SecureStore kurinda amatike yawe n'amakuru y'ibanga."
-      ]
+    {
+      "id": "translator",
+      "name": "Translator / Umuhinduzi",
+      "platform": "mobile",
+      "description": "Igikoresho cya AI cyandura amagambo n'interuro.",
+      "access": "Quick Actions -> Translator (Kuri telefone gusa)."
+    },
+    {
+      "id": "referrals",
+      "name": "Referrals / Shishikariza Abandi",
+      "platform": "web",
+      "description": "Shishikariza inshuti ubone ibihembo.",
+      "access": "Ibi biraboneka gusa kuri verisiyo ya interineti kuri amopay.com."
+    },
+    {
+      "id": "developer_api",
+      "name": "Developer Docs / API",
+      "platform": "web",
+      "description": "Inyandiko za tekiniki ku badevelopper.",
+      "access": "Ibi biraboneka gusa kuri verisiyo ya interineti."
+    },
+    {
+      "id": "biometric_auth",
+      "name": "Kugenzura mu Mubiri (Biometrics)",
+      "platform": "mobile",
+      "description": "Injira ukoresheje Face ID cyangwa Igikumwe.",
+      "access": "Kuri telefone gusa."
     }
+  ],
+  "rules": {
+    "max_transfer_rwf": "Umupaka ntarengwa ni 5,000,000 RWF ku nshuro imwe.",
+    "rate_lock_mobile_s": "Igiciro kirafungwa mu gihe cy'amasegonda 300 (iminota 5) kuri telefone.",
+    "rate_lock_web_m": "Igiciro kirafungwa mu gihe cy'iminota 15 kuri web.",
+    "password": "Ijambo ry'ibanga rigomba kuba rifite inyuguti 8-128, inyuguti nkuru, nto, umubare, n'akamenyetso.",
+    "phone_rw": "Numero ya telefone igomba kuba itangira na +250 7[2,3,8,9]... (imibare 9 nyuma ya +250)"
   },
-  "account_states": {
-    "unverified": "Umukoresha ashobora kureba gusa ariko ntashobora kohereza amafaranga. Agomba gusoza KYC mbere.",
-    "kyc_pending": "Inyandiko zatanzwe, birindiriwe kugenzurwa. Bisaba amasaha 24-48.",
-    "kyc_verified": "Uhabwa uburenganzira bwuzuye ku bigendererwa byose n'imipaka myinshi yo kohereza.",
-    "suspended": "Konti ifunzwe. Umukoresha agomba kuvugana n'ubufasha kuri support@amopay.com"
+  "messages": {
+    "web_only": "Ibi biraboneka gusa kuri verisiyo ya interineti kuri amopay.com.",
+    "mobile_only": "Ibi biraboneka gusa kuri porogaramu ya telefone (mobile app).",
+    "contact_support": "Wasiliana natwe kuri support@amopay.com cyangwa hamagara +250 700 000 000.",
+    "no_info": "Ntabwo mfite ibyo makuru ubu. Mwaduhamagara kuri support@amopay.com kugira ngo mubone ubufasha."
   },
   "error_messages": {
-    "insufficient_balance": "Umuzigo wa wallet yawe ntuhagije. Shyiramo amafaranga hanyuma ugerageze nanone.",
-    "invalid_recipient": "Numero ya telefone y'uwakiriye ntaboneka. Suzuma numero hanyuma ugerageze nanone.",
-    "session_expired": "Igihe cyo kwinjira cyarangiye. Injira nanone.",
-    "rate_expired": "Igiciro cy'isimburanwa cyarangiye nyuma y'iminota 5. Vugurura kugira ngo ubone igiciro gishya.",
-    "kyc_required": "Ibi bisaba kugenzura indangamuntu. Soza KYC mbere.",
-    "payment_declined": "Ubwishyu bwanzwe na banki yawe. Gerageza uburyo bundie bwo kwishyura.",
-    "network_error": "Ikibazo cya interineti. Gerageza nanone nyuma y'umwanya muto.",
-    "invalid_amount": "Ingano y'amafaranga ntabwo ari yo. Injiza ingano igendeye.",
-    "account_suspended": "Konti yawe ifunzwe. Twandikire kuri serivisi z'ubufasha: support@amopay.com.",
-    "transaction_limit": "Urenze umupaka w'ubwishyu wa 5,000,000 RWF. Gerageza ingano ntoya."
-  },
-  "amo_assistant_rules": {
-    "ashobora_gufasha_muri": [
-      "Uburyo bwo kohereza amafaranga",
-      "Uburyo bwo guhindura amafaranga",
-      "Uburyo bwo kuba umucuruzi",
-      "Uburyo bwo gusoza KYC",
-      "Gusobanukirwa n'amafaranga y'umusoro n'imipaka",
-      "Ubuyobozi bwo gukoresha porogaramu",
-      "Ibibazo by'imiterere y'ubwishyu",
-      "Inama z'umutekano"
-    ],
-    "ntashobora_gufasha_muri": [
-      "Gusubiza cyangwa guhagarika ubwishyu",
-      "Guhindura ijambo ry'ibanga ya konti ku buryo butaziguye",
-      "Kwinjira mu makuru ya konti y'umukoresha",
-      "Inama z'amategeko cyangwa imisoro"
-    ],
-    "ohereza_ku_muntu": [
-      "Ibikorwa byangiritse bya konti",
-      "Konti ifunzwe cyangwa igifunzwe",
-      "Ubwishyu bwanze budakemutse",
-      "KYC yanzwe inshuro nyinshi"
-    ]
-  },
-  "support_contacts": {
-    "email": "support@amopay.com",
-    "phone": "+250 700 000 000",
-    "hours": "Kuva ku wa Mbere kugeza ku wa Gatanu, kuva saa mbili za mugitondo kugeza saa kumi n'ebyiri za nimugoroba (Kigali)",
-    "social": {
-      "twitter": "@amopay",
-      "instagram": "@amopay"
-    },
-    "amo_assistant_responses": {
-      "greeting_morning": "Mwaramutse! Ndishimiye kukubona kuri Amo Pay. Nagufasha iki uyu munsi?",
-      "greeting_afternoon": "Mwiriwe! Ndishimiye kukubona. Nagufasha iki?",
-      "greeting_evening": "Ijoro ryiza! Nagufasha iki uyu munsi?",
-      "dont_understand": "Umbabarire, ntabwo nkubumvise neza. Ongera ubisobanure mu buryo bundi.",
-      "cannot_help": "Ibi sinabishobora. Twandikire kuri serivisi z'ubufasha kuri support@amopay.com",
-      "kyc_help": "Kugira ngo ugenzure indangamuntu yawe, jya ku mwirondoro wawe hanyuma uhitemo 'Kugenzura Indangamuntu'.",
-      "welcome_back": "Murakaza neza nanone kuri Amo Pay!",
-      "transaction_success": "Ubwishyu bwagenze neza! Urakoze gukoresha Amo Pay.",
-      "rate_locked": "Igiciro gifunzwe kwa minota 5. Vugurura niba girangiye.",
-      "contact_support": "Ku bibazo bikomeye, twandikire kuri support@amopay.com cyangwa +250 700 000 000."
-    }
-  },
-  "screen_routes": {
-    "ahabanza": "/(tabs)/home",
-    "ohereza_amafaranga": "/send-money",
-    "guhindura_ifaranga": "/exchange",
-    "ishyura_fagitire": "/bills",
-    "isomero_rya_marchande": "/merchant/scanner",
-    "kode_qr_y_umucuruzi": "/merchant/qr",
-    "kwiyandikisha_nk_umucuruzi": "/merchant/register",
-    "isesengura": "/analytics",
-    "kugenzura_indangamuntu": "/kyc",
-    "umwirondoro": "/profile",
-    "igenamiterere": "/settings",
-    "umuhinduzi": "/translator",
-    "umufasha_wa_ai": "/assistant",
-    "amateka_y_ibyakozwe": "/history"
-  },
-  "financial_terms": {
-    "send_money": "Ohereza Amafaranga",
-    "receive_money": "Injiza Amafaranga",
-    "balance": "Amafaranga asigaye",
-    "transaction": "Ubwishyu",
-    "exchange": "Guhindura Amafaranga",
-    "pay_bills": "Ishyura Fagitire",
-    "merchant": "Umucuruzi",
-    "account": "Konti",
-    "wallet": "Amafaranga yawe",
-    "transfer": "Kohereza",
-    "payment": "Kwishyura",
-    "amount": "Ingano y'amafaranga",
-    "fee": "Amafaranga y'ishyu",
-    "rate": "Igiciro",
-    "currency": "Ifaranga",
-    "receipt": "Icyemezo cy'ubwishyu",
-    "history": "Amateka y'ibyakozwe",
-    "limit": "Umupaka",
-    "mobile_money": "Amafaranga kuri Telefone",
-    "bank_transfer": "Kohereza kwa Banki",
-    "pending": "Birategerejwe",
-    "completed": "Byarangiye",
-    "failed": "Byanze",
-    "confirmation": "Kwemeza",
-    "cancellation": "Guhagarika",
-    "refund": "Gusubiza Amafaranga",
-    "rate_lock": "Gufata Igiciro",
-    "source_of_funds": "Inkomoko y'Amafaranga",
-    "delivery_method": "Uburyo bwo Gutanga"
-  },
-  "rwanda_specific": {
-    "mobile_money_providers": {
-      "mtn_momo": "MTN Mobile Money",
-      "airtel_money": "Airtel Money"
-    },
-    "phone_format": "Numero za Rwanda zitangira na +250 ikurikirwa na 7 hanyuma na 2, 3, 8, cyangwa 9",
-    "local_banks": [
-      "Bank of Kigali",
-      "Equity Bank",
-      "I&M Bank",
-      "Cogebanque",
-      "BPR Atlas Mara"
-    ],
-    "payment_methods": {
-      "card": "Ikarita",
-      "blik": "BLIK (Polonye gusa)",
-      "apple_pay": "Apple Pay",
-      "google_pay": "Google Pay",
-      "mobile_money": "Amafaranga kuri Telefone",
-      "bank_transfer": "Kohereza kwa Banki"
-    }
-  },
-  "authentication": {
-    "password_requirements": {
-      "description": "Ijambo ry'ibanga rigomba kuba rifite inyuguti 8-128, harimo inyuguti nkuru, inyuguti ntoya, umubare, n'ikimenyetso kidasanzwe.",
-      "min_length": "Inyuguti 8 nibura",
-      "max_length": "Inyuguti 128 ninshuro",
-      "require_uppercase": "Inyuguti nkuru nibura imwe",
-      "require_lowercase": "Inyuguti ntoya nibura imwe",
-      "require_number": "Umubare nibura umwe",
-      "require_special_char": "Ikimenyetso kidasanzwe nibura kimwe"
-    },
-    "otp": {
-      "description": "Kode y'igihe gito (OTP) igizwe n'imibare 4-8.",
-      "purpose": "Kugenzura ubwawe mbere yo gusoza ibikorwa bikomeye."
-    },
-    "biometric": {
-      "face_id": "Kugenzura mu Maso",
-      "fingerprint": "Igikumwe"
-    }
+    "insufficient_balance": "Umuzigo wawe ntuhagije.",
+    "invalid_recipient": "Numero y'uwakiriye ntaboneka.",
+    "rate_expired": "Igiciro cyarangiye. Vugurura kugira ngo ubone igiciro gishya."
   }
 }
